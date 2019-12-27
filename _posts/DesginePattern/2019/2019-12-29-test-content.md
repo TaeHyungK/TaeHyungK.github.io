@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Sample content
+title: Test content
 ---
 
 --- 
 <div class="message">
-  Sample Content
+  Test Content
 </div>
