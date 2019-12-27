@@ -3,6 +3,7 @@ layout: page
 title: About
 ---
 
+---
 ### Android Developer
  - Name
    - 김태형 (Kim Tae Hyung)
