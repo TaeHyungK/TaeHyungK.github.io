@@ -173,6 +173,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
+/* Sidebar icon */
+.sidebar-item-icon {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* Sidebar nav */
 .sidebar-nav {
   border-bottom: 1px solid rgba(255,255,255,.1);
