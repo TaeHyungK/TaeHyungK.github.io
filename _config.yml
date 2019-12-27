@@ -1,7 +1,7 @@
 # Setup
-title:               TaeHyungK의 빵틀공장
-tagline:             'A Jekyll theme'
-description:         Android Developer
+title:               TaeHyungK
+tagline:             의 빵틀공장
+description:         Programming
 url:                 http://taehyungk.github.io
 baseurl:             ''
 paginate:            5
@@ -11,6 +11,3 @@ author:
   name:              Kim Tae Hyung
   url:               http://taehyungk.github.io
   email:             xogud3125@naver.com
-
-# Custom vars
-version:             1.0.0
