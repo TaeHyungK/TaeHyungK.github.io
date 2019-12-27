@@ -177,6 +177,10 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar-item-icon {
     display: flex;
     justify-content: space-evenly;
+    padding: 1rem;
+}
+.sidebar-item-icon-img {
+    margin: 0;
 }
 
 /* Sidebar nav */
