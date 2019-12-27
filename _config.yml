@@ -11,3 +11,6 @@ author:
   name:              Kim Tae Hyung
   url:               http://taehyungk.github.io
   email:             xogud3125@naver.com
+
+# Custom vars
+version:             1.0.0
