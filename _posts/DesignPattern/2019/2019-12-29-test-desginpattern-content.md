@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Test content
+category: DesignPattern
 ---
 
 --- 
