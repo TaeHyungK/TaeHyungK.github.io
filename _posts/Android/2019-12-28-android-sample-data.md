@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android Sample Data"
+title:  "\[Android\] 테스트 데이터"
 categories: Android
 tags: CS
 author: TaeHyungK
