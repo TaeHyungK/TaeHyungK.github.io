@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "\[디자인패턴\] 테스트 데이"
+title:  "[디자인패턴] 테스트 데이"
 categories: DesignPattern
 tags: CS
 author: TaeHyungK
