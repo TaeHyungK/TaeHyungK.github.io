@@ -26,9 +26,8 @@ author: TaeHyungK
  - 가장 높은 점수를 받은 사람이 여럿일 경우, return하는 값을 오름차순 정렬해주세요.
 
 
-
 **입출력 예**
-![스크린샷 2019-12-28 오후 7.29.17](../../../img/스크린샷 2019-12-28 오후 7.29.17.png)
+<img src="https://github.com/TaeHyungK/TaeHyungK.github.io/blob/master/img/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202019-12-28%20%EC%98%A4%ED%9B%84%207.29.17.png" alt="모의고사_입출력예">
 
 **입출력 예 설명**
 
