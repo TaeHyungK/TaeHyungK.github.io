@@ -42,7 +42,7 @@ author: TaeHyungK
 
 **소스 코드**
 
-~~~
+```
 import java.util.Arrays;
 
 class PGLevel1Q1 {
@@ -68,4 +68,4 @@ class PGLevel1Q1 {
         return answer;
     }
 }
-~~~
+```
