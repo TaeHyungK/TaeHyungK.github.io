@@ -27,7 +27,7 @@ author: TaeHyungK
 
 
 **입출력 예**
-<img src="https://github.com/TaeHyungK/TaeHyungK.github.io/blob/master/img/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202019-12-28%20%EC%98%A4%ED%9B%84%207.29.17.png" alt="모의고사_입출력예">
+![스크린샷 2019-12-28 오후 7.29.17](/img/스크린샷 2019-12-28 오후 7.29.17.png)
 
 **입출력 예 설명**
 
