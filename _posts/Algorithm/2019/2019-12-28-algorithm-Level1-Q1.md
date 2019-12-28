@@ -9,6 +9,8 @@ author: TaeHyungK
 * content
 {:toc}
 
+[프로그래머스 문제](https://programmers.co.kr/learn/courses/30/lessons/42576) | [소스코드](https://github.com/TaeHyungK/algorithm/blob/master/src/programmers/level1/PGLevel1Q1.java) 
+
 **문제 설명**
 
   - 수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
@@ -72,6 +74,3 @@ class PGLevel1Q1 {
     }
 }
 ~~~
-
-문제: https://programmers.co.kr/learn/courses/30/lessons/42576<br>
-소스코드: https://github.com/TaeHyungK/algorithm/blob/master/src/programmers/level1/PGLevel1Q1.java
