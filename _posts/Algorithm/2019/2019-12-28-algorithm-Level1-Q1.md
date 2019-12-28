@@ -26,12 +26,7 @@ author: TaeHyungK
 
 
 **입출력 예**
-
-|participant|completion|return|
-|------|---|---|
-[leo, kiki, eden]|[eden, kiki]|leo
-[marina, josipa, nikola, vinko, filipa]|[josipa, filipa, marina, nikola]|vinko
-[mislav, stanko, mislav, ana]|[stanko, ana, mislav]|mislav
+![스크린샷 2019-12-28 오후 7.40.09](./img/스크린샷 2019-12-28 오후 7.40.09.png)
 
 
 **입출력 예 설명**
