@@ -27,8 +27,8 @@ description_footer:
 
 # comments
 # two ways to comment, only choose one, and use your own short name
-duoshuo_shortname: TaeHyungK의 빵틀공장
-disqus_shortname: txxbro
+duoshuo_shortname: #TaeHyungK's Blog
+disqus_shortname: TaeHyungK
 
 # Build settings
 markdown: kramdown
