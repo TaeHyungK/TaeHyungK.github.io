@@ -14,8 +14,6 @@ type: page
  - GitHub：[TaeHyungK](https://github.com/TaeHyungK)
  - E-Mail：xogud3125@naver.com
 
-### Resume
-
- - [📌 Resume](https://github.com/TaeHyungK/Resume)
+### [📌 Resume](https://github.com/TaeHyungK/Resume)
 
 
