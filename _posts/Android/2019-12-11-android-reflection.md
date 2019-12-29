@@ -26,7 +26,55 @@ author: TaeHyungK
        
 - 장점 : 접근이 불가한 private 영역에 접근하게 해주는 등 유연하게 사용할 수 있도록 함
 
-- 단점 : 성능 저하의 요인이 될 수 있음(정보를 찾을 때 드는 시간비용) <br>(특히, for문에서 사용X )
+- 단점 : 성능 저하의 요인이 될 수 있음(정보를 찾을 때 드는 시간비용) <br>(특히, for문에서 사용X)
 
+~~~java
+   /**
+     * hook WebView
+     *
+     * because below
+     * UnsupportedOperationException: For security reasons, WebView is not allowed in privileged processes
+     *
+     * @link https://stackoverflow.com/questions/29228183/java-lang-unsupportedoperationexception-for-security-reasons-webview-is-not-al
+     */
+    public void hookWebView() {
+        int sdkInt = Build.VERSION.SDK_INT;
+        try {
+            Class<?> factoryClass = Class.forName("android.webkit.WebViewFactory");
+            Field field = factoryClass.getDeclaredField("sProviderInstance");
+            field.setAccessible(true);
+            Object sProviderInstance = field.get(null);
+            if (sProviderInstance != null) {
+                LogUtil.debug(LOGD, "hookWebView() sProviderInstance isn't null");
+                return;
+            }
+            Method getProviderClassMethod;
+            if (sdkInt > 22) { // above 22
+                getProviderClassMethod = factoryClass.getDeclaredMethod("getProviderClass");
+            } else if (sdkInt == 22) { // method name is a little different
+                getProviderClassMethod = factoryClass.getDeclaredMethod("getFactoryClass");
+            } else { // no security check below 22
+                LogUtil.debug(LOGD, "hookWebView() Don't need to Hook WebView");
+                return;
+            }
+            getProviderClassMethod.setAccessible(true);
+            Class<?> providerClass = (Class<?>) getProviderClassMethod.invoke(factoryClass);
+            Class<?> delegateClass = Class.forName("android.webkit.WebViewDelegate");
+            Constructor<?> providerConstructor = providerClass.getDeclaredConstructor(delegateClass);
+            if (providerConstructor != null) {
+                providerConstructor.setAccessible(true);
+                Constructor<?> declaredConstructor = delegateClass.getDeclaredConstructor();
+                declaredConstructor.setAccessible(true);
+                sProviderInstance = providerConstructor.newInstance(declaredConstructor.newInstance());
+                LogUtil.debug(LOGD, "sProviderInstance:{" + sProviderInstance + "}");
+                field.set("sProviderInstance", sProviderInstance);
+            }
+            LogUtil.debug(LOGD, "hookWebView() Hook done!");
+        } catch (Throwable e) {
+            e.printStackTrace();
+            LogUtil.debug(LOGD, "hookWebView() " + e.getMessage());
+        }
+    }
+~~~
 
-참고 사이 : http://hiddenviewer.tistory.com/114
+참고 사이트 : http://hiddenviewer.tistory.com/114
