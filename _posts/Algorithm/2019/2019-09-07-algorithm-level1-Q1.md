@@ -42,7 +42,7 @@ author: TaeHyungK
 
 **소스 코드**
 
-```
+```java
 import java.util.Arrays;
 
 class PGLevel1Q1 {
