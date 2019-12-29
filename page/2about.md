@@ -12,10 +12,10 @@ type: page
 ### Info
 
  - GitHub：[TaeHyungK](https://github.com/TaeHyungK)
- - email：xogud3125@naver.com
+ - E-Mail：xogud3125@naver.com
 
 ### Resume
 
- - 
+ - [📌 Resume](https://github.com/TaeHyungK/Resume)
 
 
