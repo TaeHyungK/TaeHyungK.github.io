@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] 모의고사"
+title:  "[알고리즘] 체육복"
 categories: Algorithm
 tags: Algorithm Level1
 author: TaeHyungK
