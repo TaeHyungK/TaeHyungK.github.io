@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[알고리즘] 구름 > 시공의 폭풍 속으로"
+title:  "[알고리즘] 구름 > 수의 비밀"
 categories: Algorithm
 tags: Algorithm 구름EDU
 author: TaeHyungK
