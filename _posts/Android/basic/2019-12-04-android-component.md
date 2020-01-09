@@ -25,15 +25,15 @@ author: TaeHyungK
  - 사용법
     1. startService() - stopService()
     
-        ~~~java
-        Intent intent = new Intent("test.test.com.startService");
-        intent.putExtra("count", "1");
-        startService(intent); //service 실행
-        
-        Intent intent = new Intent("test.est.com.startService");
-        stopService(intent); //service 중지
-        // 동일한 Intent Filter를 사용해서 Service를 구현해야 한다.
-        ~~~
+       ```java
+       Intent intent = new Intent("test.test.com.startService");
+       intent.putExtra("count", "1");
+       startService(intent); //service 실행
+       
+       Intent intent = new Intent("test.est.com.startService");
+       stopService(intent); //service 중지
+       // 동일한 Intent Filter를 사용해서 Service를 구현해야 한다.
+       ```
    
     2. bindService()
       - 다른 프로세스(어플리케이션)와도 Data 공유 및 통신을 하게 되는 Service, 클라이언트 - 서버에서 서버의 역할처럼 수행 
@@ -103,26 +103,26 @@ author: TaeHyungK
        - 사용법
            1. 동적리시버 생성 및 등록
            
-               ~~~java
-               IntentFilter intentFilter = new IntentFilter();
-               IntentFilter.addAction(“test.test.com.action.TEST”);
-               BoradcastReceiver receiver = new BroadcastReceiver(){
-                   @Override
-                   Public void onReceive(Context context, Intent intent){
-                       // TODO 동작
-                   }
-               }
-               // 위에서 설정한 인텐트필터 + 리시버정보로 리시버 등록
-               registerReceiver(receiver, intentFilter);
-              ~~~
+               ```java
+              IntentFilter intentFilter = new IntentFilter();
+              IntentFilter.addAction(“test.test.com.action.TEST”);
+              BoradcastReceiver receiver = new BroadcastReceiver(){
+                  @Override
+                  Public void onReceive(Context context, Intent intent){
+                      // TODO 동작
+                  }
+              }
+              // 위에서 설정한 인텐트필터 + 리시버정보로 리시버 등록
+              registerReceiver(receiver, intentFilter);
+              ```
               
            2. 동적으로 등록한 리시버 호출
            
-                ~~~java
+                ```java
                 Intent intent = new Intent();
                 intent.setAction(“test.test.com.action.TEST”);
                 sendBroadcast(intent);
-                ~~~
+                ```
 
 ###### 출처
 - [Service](http://arabiannight.tistory.com/entry/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9CAndroid-Service-%EC%82%AC%EC%9A%A9%EB%B2%95)

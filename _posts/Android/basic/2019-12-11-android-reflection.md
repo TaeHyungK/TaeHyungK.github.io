@@ -28,7 +28,7 @@ author: TaeHyungK
 
 - 단점 : 성능 저하의 요인이 될 수 있음(정보를 찾을 때 드는 시간비용) <br>(특히, for문에서 사용X)
 
-~~~java
+```java
    /**
      * hook WebView
      *
@@ -75,6 +75,7 @@ author: TaeHyungK
             LogUtil.debug(LOGD, "hookWebView() " + e.getMessage());
         }
     }
-~~~
+```
 
-참고 사이트 : http://hiddenviewer.tistory.com/114
+###### 참고 사이트
+ - http://hiddenviewer.tistory.com/114
