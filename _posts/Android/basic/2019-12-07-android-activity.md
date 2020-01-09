@@ -15,6 +15,11 @@ author: TaeHyungK
   - 사용자에게 UI가 있는 화면을 제공하는 앱 컴포넌트
   - 어플리케이션은 무조건 하나이상의 액티비티가 존재해야함
 
+
+
+
+
+
 - Activity LifeCycle
   - ![ActivityLifeCycle](/img/ActivityLifeCycle.png)
   - onCreate(): 액티비티가 생성될 때 호출되며 사용자 인터페이스 초기화에 사용됨

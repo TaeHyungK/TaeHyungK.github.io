@@ -20,6 +20,11 @@ author: TaeHyungK
 >
 > 즉, 컨테이너는 **가상머신**이라기 보다는 **프로세스**에 가까움
 
+
+
+
+
+
 * docker 명령어
 
   * docker ps

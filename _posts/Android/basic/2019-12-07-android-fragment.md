@@ -15,6 +15,11 @@ author: TaeHyungK
   - 하나의 액티비티가 여러개의 화면을 가지도록 만들기 위한 개념
   - 액티비티처럼 레이아웃, 동작 처리, 생명주기를 가지는 독립적인 모듈
 
+
+
+
+
+
 - Fragment LifeCycle
   - ![FragmentLifeCycle](/img/FragmentLifeCycle.png)
   - onAttach(): 프래그먼트가 액티비티에 붙을 때 호출됨 (완벽하게 생성된 상태 아님)

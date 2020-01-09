@@ -27,6 +27,11 @@ fun main (args: Array<String>) {
 // >>> 결과: 나이가 가장 많은 사람: Person(name=철수, age=29)
 ```
 
+
+
+
+
+
 - Data class Person: name과 age라는 프로퍼티(property)가 들어간 데이터 클래스를 정의
 - val age: Int? = null: 디폴트 값은 null
   - 영희는 age를 지정하지 않았기 때문에 null이 쓰이게 됨

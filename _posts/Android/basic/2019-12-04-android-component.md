@@ -18,6 +18,11 @@ author: TaeHyungK
  - 다른 앱의 액티비티 호출도 가능
  - [Activity 상세보기](https://taehyungk.github.io/2019/12/07/android-activity/)
 
+
+
+
+
+
 ### Service
 
  - Background에서 동작하는 컴포넌트
