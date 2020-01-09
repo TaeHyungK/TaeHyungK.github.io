@@ -9,7 +9,7 @@ author: TaeHyungK
 * content
 {:toc}
 
-[프로그래머스 문제](https://programmers.co.kr/learn/courses/30/lessons/12915) | [소스코드](https://github.com/TaeHyungK/algorithm/blob/master/src/programmers/level1/PGLevel1Q1.java) 
+[프로그래머스 문제](https://programmers.co.kr/learn/courses/30/lessons/12915) | [소스코드](https://github.com/TaeHyungK/algorithm/blob/master/src/programmers/level1/PGLevel1Q10.java) 
 
 **문제 설명**
 
@@ -85,5 +85,4 @@ class PGLevel1Q10 {
         return result;
     }
 }
-
 ```
