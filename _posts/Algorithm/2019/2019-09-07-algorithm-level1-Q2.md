@@ -2,7 +2,7 @@
 layout: post
 title:  "[알고리즘] 프로그래머스 > 모의고사"
 categories: Algorithm
-tags: Algorithm Level1
+tags: 프로그래머스 Level1
 author: TaeHyungK
 ---
 

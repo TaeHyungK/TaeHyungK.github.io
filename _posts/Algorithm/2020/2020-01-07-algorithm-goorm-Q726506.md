@@ -2,7 +2,7 @@
 layout: post
 title:  "[알고리즘] 구름 > 시공의 폭풍 속으로"
 categories: Algorithm
-tags: Algorithm 구름EDU
+tags: 구름EDU
 author: TaeHyungK
 ---
 
