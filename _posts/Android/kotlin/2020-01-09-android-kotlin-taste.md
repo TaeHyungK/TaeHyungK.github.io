@@ -5,10 +5,10 @@ categories: Android
 tags: Kotlin
 author: TaeHyungK
 ---
-
 * content
 {:toc}
 
+> Kotlin IN ACTION(출판사: 에이콘) 책을 통해 Kotlin을 배워보자
 
 ### 코틀린 맛보기
 
