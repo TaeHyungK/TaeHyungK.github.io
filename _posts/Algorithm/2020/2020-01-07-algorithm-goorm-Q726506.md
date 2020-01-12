@@ -19,24 +19,23 @@ author: TaeHyungK
 ```java
 import java.io.*;
 
-class PGLevel1Q1 {
-    public class Q726506 {
-        public static void main(String[] args) throws Exception {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            String[] curTeam = br.readLine().split(" ");
-            String[] heros = br.readLine().split(" ");
-    
-            int count = 0;
-            for (String member : curTeam) {
-                for (String hero : heros) {
-                    if (member.equals(hero)) {
-                        count++;
-                    }
+public class Q726506 {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] curTeam = br.readLine().split(" ");
+        String[] heros = br.readLine().split(" ");
+
+        int count = 0;
+        for (String member : curTeam) {
+            for (String hero : heros) {
+                if (member.equals(hero)) {
+                    count++;
                 }
             }
-    
-            System.out.println(heros.length - count);
         }
+
+        System.out.println(heros.length - count);
     }
 }
+
 ```
