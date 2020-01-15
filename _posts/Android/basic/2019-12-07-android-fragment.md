@@ -41,7 +41,7 @@ author: TaeHyungK
 - Framgent에 대한 궁금점
   - 굳이 newInstance()를 사용하는 이유 와 굳이 bundle을 사용하는 이유?
     - 재생성 때문이다. 안드로이드에서는 메모리가 부족하게되면 액티비티를 파기하여 메모리를 확보하는데, 액티비티 뿌만 아니라 메모리가 부족하면 프래그먼트도 파기되며 필요시 재생성 되게 된다. 재생성시에 필요한 생성자는 아무것도 매개변수가 없는 생성자인데, `AFragment a = new AFragment(param);` 이와 같이 생성자를 만든다면 비어있는 생성자를 만들어주지 않을 경우 에러가 발생하게 된다.
-    - 프래그먼트가 재생성될 때에 호출 되는 메소드는  `Fragment[#instantiate(Context](https://m.blog.naver.com/BlogTagView.nhn?blogId=tpgns8488&pushNavigation=true&tagName=instantiate(Context) context, String fname, Bundle args)` 이다. 매개변수 중에 Bundle이 존재한다. newInstance()를 통해서 셋팅했던 Bundle이 재생성될 때 다시 셋팅되어 넘어오게 된다. **그렇기 때문에 Bundle을 통해 설정한 데이터들은 액티비티가 파기될 때 따로 onSaveInstanceState()를 하지 않아도 복구가 된다.**
+    - 프래그먼트가 재생성될 때에 호출 되는 메소드는  `Fragment[#instantiate(Context context, String fname, Bundle args)` 이다. 매개변수 중에 Bundle이 존재한다. newInstance()를 통해서 셋팅했던 Bundle이 재생성될 때 다시 셋팅되어 넘어오게 된다. **그렇기 때문에 Bundle을 통해 설정한 데이터들은 액티비티가 파기될 때 따로 onSaveInstanceState()를 하지 않아도 복구가 된다.**
     
 - Fragment에서의 onSaveInstanceState()?
   - Fragment 종료 시, onPause() -> onSaveInstanceState() 순서로 호출됨
