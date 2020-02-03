@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 정렬 - Comparator, Comparable, 버블 정렬, 선택 정렬, 퀵 정렬"
+title:  "[Android] 정렬 - Comparator, Comparable, 버블 정렬, 선택 정렬, 퀵 정"
 categories: Android
 tags: CS
 author: TaeHyungK
@@ -38,6 +38,8 @@ author: TaeHyungK
 
 
 
+
+### 정렬의 종류
 
  - 버블 정렬
    - 인접한 두 원소를 비교하여 위치를 바꿔가며 정렬하는 방식
