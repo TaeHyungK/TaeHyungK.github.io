@@ -81,9 +81,13 @@ author: TaeHyungK
  - Player의 상태
    ![스크린샷 2020-02-03 오후 8.58.21](/img/스크린샷 2020-02-03 오후 8.58.21.png)
    > 최초 플레이어 생성 시 `IDLE` 상태가 되고
+   >
    > setDataSource() 를 호출하게 되면 `Initialized` 상태가 된다.
+   >
    > 이후 prepare() 혹은 prepareAsync() 함수를 호출할 수 있고, MediaPlayer가 준비가 되면 `Prepared` 상태가 된다.
+   >
    > 이후에 start() 함수를 호출하여 미디어가 재생되도록 할 수 있다. 이때에는 `Started`, `Paused`, `PlaybackCompleted` 사이를 왔다갔다 할 수 있고 start(), pause(), seekTo() 함수를 사용할 수 있다.
+   >
    > stop() 함수를 호출할 경우 `Prepared` 상태로 되지 않으면 start() 함수를 호출할 수 없으니 주의해야 한다.
    >   - 틀린 상태에서 틀린 함수를 호출하게 되면 버그가 발생할 수 있으므로 항상 상태를 염두해 두고 MediaPlayer 클래스를 사용하는 것이 중요하다.
 
