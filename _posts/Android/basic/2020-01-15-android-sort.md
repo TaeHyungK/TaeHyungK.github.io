@@ -14,8 +14,11 @@ author: TaeHyungK
  - Comparator
    - 기본 정렬(Integer, Double - 오름차순 / String - 사전순)과 다르게 정렬하고 싶을 때 사용하는 추상 클래스
    - compare() 메소드를 통해 비교
+   
      > 음수 또는 0을 반환할 경우 두 비교 대상의 위치가 그대로 유지
+     >
      > 양수를 리턴할 경우 두 비교 대상의 위치를 바꿈
+
    ```java
    // 내림차순 정렬
    public class ReverseNumber implements Comparator<Integer> {
@@ -30,6 +33,7 @@ author: TaeHyungK
    - 기본 정렬을 어떤 기준으로 하느냐를 커스텀할 때에 사용하는 추상 클래스
    - compareTo() 메소드를 통해 비교
      > 음수 또는 0을 반환할 경우 두 비교 대상의 위치가 그대로 유지
+     >
      > 양수를 리턴할 경우 두 비교 대상의 위치를 바꿈
 
 
