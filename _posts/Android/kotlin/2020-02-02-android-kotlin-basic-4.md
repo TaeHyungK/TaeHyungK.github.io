@@ -104,7 +104,7 @@ author: TaeHyungK
     
   > 객체를 이터레이션 하는 경우 어떻게 되는지 궁금해진다. 객체를 풀어서 각 부분을 분리하는 구조 분해 문법은 7장에서 다루어 보자!
 
-- 컬렉션 이터레이션기하기
+- 컬렉션 이터레이션하기
   ```kotlin
   val list = arrayListOf("10", "11", "1001")
   for ((index, element) in list.withIndex()) {
