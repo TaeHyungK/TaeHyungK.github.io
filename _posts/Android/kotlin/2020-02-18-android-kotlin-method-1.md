@@ -164,20 +164,20 @@ fun <T> Collection<T>.joinToString(separator: String = ", ", prefix: String = ""
 // >>> println(list.joinToString(separator = "; ", prefix = "(", postfix = ")"))
 // 결과: (1; 2; 3)
 ```
-  - 확잠 함수는 단지 **정적 메소드 호출에 대한 문법적인 편의**일 뿐이다.
-  - 즉, 확장 함수는 정적 메소드와 같은 특징을 가진다.
+- 확잠 함수는 단지 **정적 메소드 호출에 대한 문법적인 편의**일 뿐이다.
+- 즉, 확장 함수는 정적 메소드와 같은 특징을 가진다.
     - 이 말은, 확장 함수를 하위 클래스에서 **오버라이드** 할 수 없다는 말이다.
-    
+
     ```kotlin
     fun View.showOff() = println("I'm a view!")
     fun Button.showOff() = println("I'm a button!")
-    
+
     // >>> val view: View = Button()
     // >>> val.showOff()
     // 결과: I'm a view!
     ```
-      - view가 가리키는 객체의 instance는 Button 타입이지만, view의 타입은 View이기 때문에 무조건 View의 확장 함수가 호출된다.
-      - **확장 함수는 실제로 정적 메소드를 호출한다 ! + 호출될 확장 함수를 정적으로 결정한다 !**
+  - view가 가리키는 객체의 instance는 Button 타입이지만, view의 타입은 View이기 때문에 무조건 View의 확장 함수가 호출된다.
+  - **확장 함수는 실제로 정적 메소드를 호출한다 ! + 호출될 확장 함수를 정적으로 결정한다 !**
       
 #### 확장 프로퍼티
 기존 클래스 객체에 대한 프로퍼티 형식의 구문으로 사용할 수 있는 API를 추가할 수 있다.
