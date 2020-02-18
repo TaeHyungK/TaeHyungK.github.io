@@ -167,6 +167,7 @@ fun <T> Collection<T>.joinToString(separator: String = ", ", prefix: String = ""
   - 확잠 함수는 단지 **정적 메소드 호출에 대한 문법적인 편의**일 뿐이다.
   - 즉, 확장 함수는 정적 메소드와 같은 특징을 가진다.
     - 이 말은, 확장 함수를 하위 클래스에서 **오버라이드** 할 수 없다는 말이다.
+    
     ```kotlin
     fun View.showOff() = println("I'm a view!")
     fun Button.showOff() = println("I'm a button!")
