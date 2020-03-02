@@ -257,6 +257,59 @@ fun tryToCountButtonClicks(button: Button): Int {
   - onCiick 핸들러는 버튼이 클릭될 때마다 clicks 변수를 증가시키지만 그 때에는 함수 호출이 종료된 이후이기 때문이다.
   - 즉, 해당 clicks 변수를 확인할 수 있도록 **클래스의 프로퍼티**나 전역 프로퍼티 등의 위치로 빼서 나중에 해당 변수를 확인할 수 있도록 해야 한다.
 
+##### 멤버 참조
+
+**이미 선언된 함수를 값으로 사용해야 할 때 멤버 참조 `::` 를 사용하면 된다.**
+
+```kotlin
+// 모두 같은 동작
+people.maxBy(Person::age) // 멤버 참조
+people.maxBy { p -> p.age }
+people.maxBy { it.age }
+
+fun Person.isAdult() = age >= 21
+val predicate = Person::isAdult // 확잠 함수도 동일하게 멤버 참조를 사용할 수 있음
+
+fun salute() = println("Salute!")
+run(::salute) // 최상위 함수 참조
+// 결과: Salute!
+
+// sendEmail 함수에게 작업 위임
+val action = { person: Person, message: String -> sendEmail(person, message) }
+// 람다 대신 멤버 참조 사용
+val nextAction = ::sendEmail
+
+// 생성자 참조
+data class Person(val name: String, val age: Int)
+val createPerson = ::Person // 생성자 참조 저장
+val p = createPerson("Alice", 29) // 생성자 참조를 이용해 인스턴스 생성
+```
+
+- **멤버 참조**는 프로퍼티나 메소드를 단 하나만 호출하는 함수 값을 만들어준다.
+- `::` 는 클래스 이름과 참조하려는 멤버(프로퍼티나 메소드) 이름 사이에 위치한다.
+- **멤버 참조** 뒤에는 괄호를 넣으면 안된다. (메소드여도!!)
+- **멤버 참조**는 그 멤버를 호출하는 람다와 같은 타입이다.
+- 최상위 함수, 최상위 프로퍼티 참조도 가능하다.
+  - 클래스 이름을 생략하고 `::` 로 참조를 바로 시작하면 된다.
+- **생성자 참조**를 사용하면 클래스 생성 작업을 연기하거나 저장해둘 수 있다.
+  - `::` 뒤에 클래스 이름을 넣으면 생성자 참조를 만들 수 있다.
+
+**바운드 멤버 참조 (1.1부터 사용 가능)**
+```kotlin
+// 1.0 멤버 참조
+val p = Person("Dmistry", 34)
+val personAgeFunction = Person::age
+println(personAgeFunction(p))
+// 결과: 34
+
+// 1.1 바운드 멤버 참조
+val p = Person("Dmistry", 34)
+val ageFunction = p::age // p에 엮인 멤버 참조
+println(ageFunction())
+// 결과: 34
+```
+
+> TODO 바운드 멤버 참조는 한 인스턴스에 대해서만 동작이 될 것으로 생각이 드는데 이걸 사용할만한 곳이 있을까? 하는 의문이 든다.
 
 ###### 출처
 
