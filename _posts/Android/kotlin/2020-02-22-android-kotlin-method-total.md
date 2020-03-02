@@ -3,7 +3,7 @@ layout: post
 title:  "[Android] Chapter3. 함수 정의와 호출 총정리"
 categories: Android
 tags: Kotlin
-author: TaeHyungK
+author: iyj9328
 ---
 
 * content
@@ -41,6 +41,12 @@ fun main(args: Array<String>) {
   ```
 
   - `last()`, `max()` 는 코틀린에서 편의를 위해 추가한 **확장함수**
+
+
+
+
+
+
 
 **직관적인 함수 호출**
 
