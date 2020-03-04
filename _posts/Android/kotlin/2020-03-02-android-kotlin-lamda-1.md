@@ -123,7 +123,7 @@ people.maxBy({ p: Person -> p.age})
 people.maxBy() { p: Person -> p.age}
 
 // 람다가 마지막 인자고, 괄호 뒤에 람다를 썼을 경우 괄호 생략 가능
-people.maxby { p: Person -> p.age}
+people.maxBy { p: Person -> p.age}
 ```
 
 > 간단한 경우라면 괄호 없이 람다식만으로 명시해도 나쁘지 않을 것으로 생각되지만 웬만하면 괄호를 사용하여 해당 람다식이 메소드에 포함된 람다식이라는 것을 확실히 하는 것이 가독성에 더 좋을 것 같다.
@@ -144,7 +144,7 @@ val names = people.joinToString(" ") { p: Person -> p.name}
 **람다 파라미터 타입 제거하기**
 ```kotlin
 people.maxBy { p: Person -> p.age } // 파라미터 타입 명시
-people.maxby { p -> p.age } // 파라미터 타입 생략 (컴파일러가 추론)
+people.maxBy { p -> p.age } // 파라미터 타입 생략 (컴파일러가 추론)
 
 // 변수에 람다식 담는 경우 컴파일러가 타입 추론 불가
 val getAge = { p: Person -> p.age }
