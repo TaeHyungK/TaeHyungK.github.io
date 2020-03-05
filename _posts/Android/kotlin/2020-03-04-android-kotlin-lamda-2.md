@@ -279,6 +279,148 @@ println(file.isInsideHiddenDirectory())
 - `generateSequence`: 이전의 원소를 인자로 받아 다음 원소를 계산하는 시퀀스를 만드는 함수
 - 최종 연산인 `sum()` 을 호출 하기 전에는 계산되지 않다가 최종 연산이 호출될 때에 계산이 수행된다.
 
+#### 자바 함수형 인터페이스 활용
+
+##### 함수형 인터페이스
+
+추상 메소드가 단 하나 있는 인터페이스를 **함수형 인터페이스** 또는 **SAM(단일 추상 메소드, Single Abstract method) 인터페이스**라고 한다.
+
+```java
+// java 8 이전 익명클래스로 표현
+button.setOnClickListener(new OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        /* TODO */
+    }
+})
+
+// java 8 이후 함수형 인터페이스를 람다로 표현
+button.setOnClickListener {view -> /* TODO */}
+```
+- 자바에서는 함수형 인터페이스 즉, SAM 인터페이스인 경우 자바 8버전 이후 람다를 이용하여 더 간결하게 표현할 수 있다. (코틀린도 너무나 당연하게 사용 가능하다.)
+
+##### 자바 메소드에 람다를 인자로 전달
+
+```java
+// java 함수형 인터페이스를 인자로 전달
+void postponeComputation(int delay, Runnable computation);
+```
+
+```kotlin
+// 위의 자바 코드에 코틀린에서 람다를 전달하여 호출
+postponeComputation(1000) { println(42) } // 함수형 인터페이스에 람다를 전달
+
+// 객체 식을 전달
+postponeComputation(1000, object: Runnable {
+    override fun run() {
+        println(42)
+    }
+})
+```
+- 컴파일러는 자동으로 람다를 Runnable 인스턴스(Runnable을 구현한 익명 클래스 인스턴스)로 변환하여 전달한다.
+- Runnable을 구현하는 무명 객체를 명시적으로 만들어서 사용하는 것도 가능하다.
+
+> 람다를 넘길 때와 무명 객체를 생성하여 넘길 때의 차이점?
+>   - 무명 객체를 생성하여 넘기는 경우, 메소드를 호출할 때마다 새로운 인스턴스가 생성된다.
+>   - 생성된 Runnable 인스턴스는 단 하나만 생성되며 메소드 호출 시 반복 사용된다.
+>     - 단, 람다 내에서 람다 외부의 변수를 포획하는 경우에는 무명 객체처럼 새로운 인스턴스가 생성된다.
+
+> Java 8 언어 기능과 Jack을 활성화 방법
+> - app 단 build.gradle 내에 **compileOptions** 를 통해 지정해준다.
+> - ![스크린샷 2020-03-05 오후 9.31.17](/img/스크린샷 2020-03-05 오후 9.31.17.png)
+>
+> 코틀린 컴파일 시 자바 8 바이트 코드생성 방법
+> - jvm-target 1.8 이라고 kotlinc 호출할 때 커맨드라인에서 옵션 설정을 지정
+> - 메이븐이나 그래들 프로젝트 설정에 명시
+
+##### SAM 생성자: 람다를 함수형 인터페이스로 명시적으로 변경
+
+컴파일러가 자동으로 람다를 함수형 인터페이스 익명 클래스로 바꾸지 못하는 경우 `SAM 생성자`를 사용한다.
+
+```kotlin
+val listener = OnClickListener { view -> 
+    val text = when (view.id) {
+        R.id.button1 -> "First button"
+        R.id.button2 -> "Second button"
+        else -> "Unknown button"
+    }
+    toast(text)
+}
+
+button1.setOnClickListener(listener)
+button2.setOnClickListener(listener)
+```
+
+> 람다와 리스너 등록/해제
+> - 람다는 코드 블럭이기 때문에 `this` 가 없다. 즉, 객체처럼 익명 클래스의 인스턴스를 참조할 수 없다.
+> - 람다 내에서 `this`는 그 람다를 둘러싼 클래스의 인스턴스를 가르킨다. 주의하자.
+> - 리스너를 가르키고 싶다면 람다가 아닌 **무명 객체**를 사용해야 한다.
+> - 무명 객체 내에서 `this`는 객체 인스턴스 자신을 가르킨다.
+
+#### 수신 객체 지정 람다: with와 apply
+
+자바의 람다에는 없는, 코틀린 람다만의 독특한 기능인 `수신 객체 지정 람다`는 수신 객체를 명시하지 않고 람다의 본문 안에서 다른 객체의 메소드를 호출할 수 있게 하는 것이다.
+
+##### with 함수
+
+`with` 함수는 파라미터가 2개인 메소드로 첫 번째 인자는 객체를 두 번째 인자는 람다를 받는다.
+  - 첫 번째 인자로 받은 객체를 두 번째 인자로 받은 람다의 수신 객체로 만든다.
+
+```kotlin
+fun alphabet(): String {
+    val sb = StringBuilder()
+    return with(sb) {
+        for (letter in 'A'..'Z') {
+            this.append(letter) // this를 통해 수신 객체에 접근
+        }
+        append("\nNow I know alphabet!") // this 없이 수신 객체의 메소드 호출
+        this.toString() // 람다에서 값 반환
+    }
+}
+```
+
+- 수신 객체 지정 람다는 확장 함수와 비슷한 동작을 정의하는 한 방법이다.
+- `<T, R> with(receiver: T, block: T.() ‐> R)`: block 함수의 수신 객체는 T
+
+##### apply 함수
+
+`apply` 함수는 `with` 함수와 동일한 동작이지만 항상 자신에게 전달된 객체(수신 객체)를 반환한다.
+
+```kotlin
+fun alphabet() = StringBuilder().apply {
+    for (letter in 'A'..'Z') {
+        append(letter)
+    }
+    append("\nNow I know the alphabet!")
+}.toString()
+```
+
+- ` fun <T> T.apply(block: T.() ‐> Unit): T`: apply 함수는 확장 함수로 정의되어 있다.
+- 객체의 인스턴스를 만들면서 즉시 프로퍼티 중 일부를 초기화 해야 하는 경우 유용하다.
+
+**apply를 이용해 TextView 만들면서 초기화 하기**
+
+```kotlin
+fun createViewWithCustomAttributes(context: Context) =
+    TextView(context).apply {
+        text = "Sample Text" // this 생략하여 TextView의 프로퍼티 사용
+        textSize = 20.0 
+        setPadding(10, 0, 0, 0) // this 생략하여 TextView의 멤버 함수 사용
+    }
+```
+
+##### buildString 함수
+
+`buildString` 함수는 StringBuilder 객체를 만들어 toString()을 호출해주는 작업을 해준다.
+
+```kotlin
+fun alphabet() = buidlString {
+    for (letter in 'A'..'Z') {
+        append(letter)
+    }
+    append("\nNow I know the alphabet!")
+}
+```
 
 
 ###### 출처
