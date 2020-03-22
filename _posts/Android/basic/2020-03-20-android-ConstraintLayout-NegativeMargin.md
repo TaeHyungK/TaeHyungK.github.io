@@ -2,7 +2,7 @@
 layout: post
 title:  "[Android] ConstraintLayout의 음수 마진(Negative Margin)"
 categories: Android
-tags: 꼼수
+tags: 기록
 author: TaeHyungK
 ---
 
