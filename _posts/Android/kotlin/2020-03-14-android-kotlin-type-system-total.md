@@ -19,7 +19,7 @@ author: iyj9328
 
 * NPE처리를 위해 Nullable타입을 명시적으로 지원
 
-  * ```Java
+  * ```java
     public void strLen(@NotNull String s1, @Nullable String s2) {...}
     ```
 
@@ -117,7 +117,7 @@ fun main(args: Array<String>) {
 >
 > 저 부분만 Java로 변환하면
 >
-> ```Java
+> ```java
 > if(this.getCompany() != null 
 > && this.getCompany().getAddress() != null 
 > && this.getCompany().getAddress().getCountry() != null)
