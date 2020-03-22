@@ -805,4 +805,6 @@ fun main(args: Array<String>) {
 ###### 출처
 
 - Kotlin IN Action / 출판사: 에이콘
+- [Study Repository](https://github.com/TEAM-ASC/Kotlin/blob/master/Chapter6.%20%EC%BD%94%ED%8B%80%EB%A6%B0%20%ED%83%80%EC%9E%85%20%EC%8B%9C%EC%8A%A4%ED%85%9C/Chapter6.%20%EC%BD%94%ED%8B%80%EB%A6%B0%20%ED%83%80%EC%9E%85%20%EC%8B%9C%EC%8A%A4%ED%85%9C.md)
+  - made by [iyj9328](https://github.com/iyj9328)
   
