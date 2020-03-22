@@ -110,7 +110,7 @@ fun main(args: Array<String>) {
 >
 > 위의 **Safe Call 연산자**를 보고 처음엔 읽기 불편했지만 아래의 예시를 보고 느낌이 왔다.
 >
-> ```Kotlin
+> ```kotlin
 > val country = this.company?.address?.country
 > return if (country != null) country else "Unknown"
 > ```
@@ -140,7 +140,7 @@ fun main(args: Array<String>) {
 
 Ex .1)  Safe Call 연산자 vs Elvis 연산자
 
-```Kotlin
+```kotlin
 //Safe Call 연산자
 fun Person.countryName(): String {
    val country = this.company?.address?.country
@@ -153,7 +153,7 @@ fun Person.countryName() = this.company?.address?.country ?: "Unknown"
 
 Ex.2) Elvis 연산자를 이용한 예외 처리
 
-```Kotlin
+```kotlin
 class Address(val streetAddress: String, val zipCode: Int,
               val city: String, val country: String)
 
@@ -257,7 +257,7 @@ class CopyRowAction(val list: JList<String>): AbstractAction(){
 
 * 한 줄에 나란히 널 아님 단언이 쓰였을 경우, 어떤 식에서 발생한 예외인지 알 수 없으니 나란히 사용은 피하자
 
-  ```Kotlin
+  ```kotlin
   person.company!!.address!!.country
   ```
 
@@ -291,7 +291,7 @@ fun main(args: Array<String>) {
 * lateinit 변경자를 사용하면 Nullable, NotNull을 난잡하게 사용하지않고 프로퍼티를 나중에 초기화 할 수 있다.
 * 프로퍼티가 val인 경우는 적용할 수 없고, 항상 var여야만 한다.
 
-```Kotlin
+```kotlin
 import org.junit.Before
 import org.junit.Test
 import org.junit.Assert
@@ -354,7 +354,7 @@ public inline fun CharSequence?.isNullOrBlank(): Boolean {
 
 Ex.)  널이 될 수 있는 타입파라미터와 상한 지정
 
-```Kotlin
+```kotlin
 //널이 될 수 있는 타입 파라미터
 fun <T> printHashCode(t: T) {
     println(t?.hashCode())
@@ -397,7 +397,7 @@ public class Person{
 }
 ```
 
-```Kotlin
+```kotlin
 //Kotlin
 fun yellAtSafe(person: Person) {
     println(person.name.toUpperCase() + "!!!")
