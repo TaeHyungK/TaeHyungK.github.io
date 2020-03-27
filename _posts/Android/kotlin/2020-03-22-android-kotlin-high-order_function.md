@@ -368,7 +368,9 @@ synchronized(l) {
 ```
 
 > 위 코드에 대한 의문
-> - kotlin 에서는 `try catch` 구문에서 `catch`를 생략해도 되는 것인가?
+> - 코틀린에서는 `try catch` 구문에서 `catch`를 생략해도 되는 것인가?
+>   - 코틀린뿐만 아니라 자바에서도 `try-finally` 구문이 있는 것으로 보인다.
+>   - [참고 자료](https://riptutorial.com/ko/java/example/25177/try-finally-%EB%B0%8F-try-catch-finally-%EB%AC%B8)
 
 
 ```kotlin
@@ -487,11 +489,131 @@ people.filter { it.age > 30} // 중간 리스트 생성
   - 현재 JVM은 함수 호출과 람다를 인라이닝 해주지 못함
     > 태형 Think !
     > - JVM 단에서 함수 호출과 람다를 인라이닝 해주지 못하니 직접 인라인 함수를 명시해주면 인라이닝이 되기 때문인 것 같다.
-  - `넌로컬(non-local 반환`과 같이 일반 람다에서는 사용할 수 없는 몇가지 기능을 사용할 수 있다.
+  - `넌로컬(non-local) 반환`과 같이 일반 람다에서는 사용할 수 없는 몇가지 기능을 사용할 수 있다.
 - inline 함수를 만들 때는 코드 크기에 주의가 필요하다.
   - 바이트 코드를 증가시키므로 inline 함수는 크기가 작아야 한다.
 
-// TBD ...
+##### 자원 관리를 위해 인라인된 람다 사용
+
+일반적으로 자원 관리를 할 때에 `try-finally`문을 사용하여 `finally` 블록에서 자원을 해제하는 방식을 사용한다.
+
+**코틀린 라이브러리의 `withLock`**
+```kotlin
+val l: Lock = ...
+l.withLock {
+    // 락에 의해 보호되는 자원을 사용
+}
+```
+- `withLock` 함수: 락을 잠근 다음에 주어진 동작을 수행하며 Lock 인터페이스의 확장함수이다.
+
+**자바7에 생긴 `try-with-resource`**
+```java
+static String readFirstLineFromFile(String path) throw IOException {
+    try(BufferedReader br = new BufferedReader(new FileReader(path))) {
+        return br.readLine()
+    }
+}
+```
+- 리소스를 직접 해제해주지 않아도 리소스를 `close()` 해준다.
+- 단, AutoCloseable을 구현한 객체에 대해서만 `close()` 함수를 호출해준다.
+- [try-with-resource 참고 자료](https://codechacha.com/ko/java-try-with-resources/)
+
+**`try-with-resource`를 대체하는 코틀린의 `use`**
+```kotlin
+fun readFirstLineFromFile(path: String): String {
+    BufferedReader(FileReader(path)).use { br ->
+        return br.readLine() // 람다의 종료가 아닌 readFirstLineFromFile 함수를 끝내며 값 반환
+    }
+}
+```
+- closeable 자원에 대한 확장 함수이며 인라인 함수이다.
+
+#### 고차 함수 안에서 흐름 제어
+
+##### 람다 안의 return문: 람다를 둘러싼 함수로부터 반환
+
+**넌로컬(non-local) 반환**: 자신을 둘러싸고 있는 블록보다 더 바깥에 있는 다른 블록을 반환하게 만드는 return 문
+
+```kotlin
+data class Person(val name: String, val age: Int)
+val people = listOf(Person("Alice", 29), Person("Bob", 31))
+
+fun lookForAlice(people: List<Person>) {
+    people.forEach {
+        if (it.name == "Alice") {
+            println("Found !")
+            return
+        }
+    }
+    println("Alice is not found")
+}
+```
+- 람다 내에서 `return`을 사용할 경우 란다로부터만 반횐되는 것이 아니라 람다를 호출하는 함수가 실행을 끝내고 반환된다.
+- 인라인 함수에 전달된 람다의 경우에만 넌로컬 반환이 가능하다.
+  - 예제에서 `forEach`는 인라인 함수이기 때문에 사용이 가능하다.
+- 인라인되지 않는 함수에 전달된 람다에서는 return을 사용할 수 없다.
+
+##### 람다로부터 반환: 레이블을 사용한 return
+
+**로컬(local) 반환**: 말 그대로 자신을 둘러싸고 있는 블록을 반환시키는 return 문
+
+- 람다 내에서 사용될 경우 for 루프의 break와 비슷한 역할을 한다.
+- 넌로컬 반환과 로컬 반환을 비교하기 위해 **레이블(label)**을 사용한다.
+
+```kotlin
+fun lookForAlice(people: List<Person>) {
+    people.forEach label@{
+        if (it.name == "Alice") return@label    
+    }
+    println("Alice might be somewhere")
+}
+
+lookForAlice(people)
+//결과: Alice might be somewhere
+
+fun lookForAlice(people: List<Person>) {
+    people.forEach {
+        if (it.name == "Alice") return@forEach
+    }
+    println("Alice might be somewhere")
+}
+lookForAlice(people)
+//결과: Alice might be somewhere
+```
+- 람다를 여는 중괄호({) 앞에서 람다 레이블 이름 뒤에 @ 문자를 추가하여 명시하고 return 키워드 뒤에 @ 문자와 레이블을 명시하면 된다.
+- 인라인 함수의 이름을 return 뒤에 레이블로 사용해도 가능하다.
+- 람다 식의 레이블을 명시할 경우 함수 이름을 레이블로 사용할 수 없다.
+
+> **레이블이 붙은 this 식**
+> - this 식의 레이블에도 동일한 규칙이 적용된다.
+> - 수신 객체 지정 람다 앞에 레이블을 붙인 경우 this 뒤에 그 레이블을 붙여서 묵시적인 컨텍스트 객체를 지정할 수 있다.
+> ```kotlin
+> println(StringBuilder().apply sb@{ 
+>     listOf(1, 2, 3).apply{
+>         this@sb.append(this.toString())
+>     }
+> })
+> ```
+
+##### 무명 함수: 기본적으로 로컬 return
+
+```kotlin
+fun lookForAlice(people: List<Person>) {
+    people.forEach(fun (person) { // 람다식 대신 무명 함수를 사용
+        if (person.name == "Alice") return // 가장 가까운 함수에서 return 처리가 됨
+        println("${person.name} is not Alice")
+    })
+}
+```
+
+```kotlin
+people.filter(fun (person): Boolean {
+    return person.age < 30
+})
+
+// 식을 본문으로 하는 무명 함수의 반환 타입은 생략할 수 있음
+people.filter(fun (person) = person.age < 30)
+```
 
 
 ###### 출처
