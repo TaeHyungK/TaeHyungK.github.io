@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 코틀린 맛보기"
+title:  "[Kotlin] 코틀린 맛보기"
 categories: Android
 tags: Kotlin
 author: TaeHyungK

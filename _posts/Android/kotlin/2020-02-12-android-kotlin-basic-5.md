@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 코틀린 기초 - 예외(Exception) 처리"
+title:  "[Kotlin] 코틀린 기초 - 예외(Exception) 처리"
 categories: Android
 tags: Kotlin
 author: TaeHyungK

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 코틀린 기초 - 클래스와 프로퍼티"
+title:  "[Kotlin] 코틀린 기초 - 클래스와 프로퍼티"
 categories: Android
 tags: Kotlin
 author: TaeHyungK

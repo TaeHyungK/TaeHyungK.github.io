@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 클래스, 객체, 인터페이스 3탄"
+title:  "[Kotlin] 클래스, 객체, 인터페이스 3탄"
 categories: Android
 tags: Kotlin
 author: TaeHyungK

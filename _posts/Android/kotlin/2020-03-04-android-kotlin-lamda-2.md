@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 람다로 프로그래밍 2탄"
+title:  "[Kotlin] 람다로 프로그래밍 2탄"
 categories: Android
 tags: Kotlin
 author: TaeHyungK

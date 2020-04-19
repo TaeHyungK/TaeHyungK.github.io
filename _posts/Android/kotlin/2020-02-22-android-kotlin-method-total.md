@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] Chapter3. 함수 정의와 호출 총정리"
+title:  "[Kotlin] Chapter3. 함수 정의와 호출 총정리"
 categories: Android
 tags: Kotlin
 author: iyj9328

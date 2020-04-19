@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 코틀린 고차 함수"
+title:  "[Kotlin] 코틀린 고차 함수"
 categories: Android
 tags: Kotlin
 author: TaeHyungK

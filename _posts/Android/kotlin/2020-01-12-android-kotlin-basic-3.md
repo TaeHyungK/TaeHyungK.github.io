@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 코틀린 기초 - enum과 when"
+title:  "[Kotlin] 코틀린 기초 - enum과 when"
 categories: Android
 tags: Kotlin
 author: TaeHyungK

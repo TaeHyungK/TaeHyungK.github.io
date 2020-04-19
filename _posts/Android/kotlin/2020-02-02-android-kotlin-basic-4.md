@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android] 코틀린 기초 - while과 for 루프"
+title:  "[Kotlin] 코틀린 기초 - while과 for 루프"
 categories: Android
 tags: Kotlin
 author: TaeHyungK
