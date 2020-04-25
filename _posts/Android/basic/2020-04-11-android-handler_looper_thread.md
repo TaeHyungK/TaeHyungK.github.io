@@ -20,6 +20,12 @@ UI 작업을 비동기적으로 처리하게 되면 두 스레드가 동시에 �
 
 멀티 스레드 환경에서 Main Thread와 Worker Thread 간 즉, 서로 다른 스레드 간에 통신을 도와주는 도구가 바로 `Handler`와 `Looper` 이다.
 
+
+
+
+
+
+
 #### 동작 방식
 
 1. 핸들러의 sendMessage()를 통해 `Message Queue`에 메세지를 차례대로 넣는다.
