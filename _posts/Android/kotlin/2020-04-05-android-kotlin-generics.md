@@ -39,6 +39,11 @@ author: iyj9328
   val readers : MutableList<String> = mutableListOf()
   ```
 
+
+
+
+
+
 > **알고가자!**
 >
 > *'Java와 Kotlin의 제네릭 차이?'*
