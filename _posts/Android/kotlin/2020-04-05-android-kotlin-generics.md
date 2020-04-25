@@ -13,8 +13,6 @@ author: iyj9328
 
 ### Chapter9 제네릭스(Generics)
 
-
-
 #### 1. 제네릭 타입 파라미터
 
 * 제네릭스를 사용하기 위해서는 **타입 파라미터(type parameter)**를 받는 타입을 정의하고, 인스턴스를 만들어 타입파라미터를 구체적인 **타입 인자(type argument)**로 치환해야한다. (Ex. Map<K, V>  = >  Map<String, Person>)
