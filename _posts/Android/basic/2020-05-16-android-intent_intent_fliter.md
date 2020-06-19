@@ -15,17 +15,17 @@ author: TaeHyungK
 
 ##### Component를 실행하기 위해 시스템에 넘기는 정보
 
-
-
-
-
-
+즉, 실행하고자 하는 컴포넌트 정보를 담은 Intent 구성 -> 시스템 -> Intent 정보를 통해 그에 맞는 Component를 실행하게 된다.
 
 ### IntentFilter
 
 #### 특정 인텐트를 받을지 말지 정의하는 역할을 수행함
 
-즉, 실행하고자 하는 컴포넌트 정보를 담은 Intent 구성 -> 시스템 -> Intent 정보를 통해 그에 맞는 Component를 실행하게 된다.
+
+
+
+
+
 
 ### Intent 객체의 구성 요소
 - Action(액션): 수행할 액션 이름
