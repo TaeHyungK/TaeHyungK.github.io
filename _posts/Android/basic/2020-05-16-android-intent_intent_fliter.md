@@ -57,8 +57,6 @@ author: TaeHyungK
 >
 > `tel:01012345678`: 전화번호 01012345678을 가리킴
 
-#### [📃 안드로이드 인텐트 레퍼런스](http://developer.android.com/reference/android/content/Intent.html)
-
-
 ###### 참고 사이트
-- https://kairo96.gitbooks.io/android/ch2.8.html
+- [📃 안드로이드 인텐트 레퍼런스](http://developer.android.com/reference/android/content/Intent.html)
+- [https://kairo96.gitbooks.io/android/ch2.8.html](https://kairo96.gitbooks.io/android/ch2.8.html)
