@@ -2,7 +2,7 @@
 layout: post
 title:  "[Android] let, apply, run, with 함수"
 categories: Android
-tags: CS
+tags: Kotlin
 author: TaeHyungK
 ---
 
