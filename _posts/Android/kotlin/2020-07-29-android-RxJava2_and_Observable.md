@@ -98,7 +98,21 @@ Rx의 기본적인 단위입니다. Observable로 부터 발생되는 이벤트�
 * onComplete: Observable에 대한 작업이 끝나고 스트림이 에러 없이 정상적으로 닫혔을 때 호출
 
 ```kotlin
-// TODO 예제 추가 필요.
+// Firestore에 BOARDS 목록 가져오는 예제
+Observable.create { emitter ->
+            firestoreDb.collection(DataConst.BOARDS)
+                .orderBy(DataConst.TIMESTAMP, Query.Direction.DESCENDING)
+                .addSnapshotListener{ querySnapshot, e ->
+                    if (e != null) {
+                        Log.w(TAG, "getBoardList() | occur error", e)
+                        return@addSnapshotListener
+                    }
+
+                    querySnapshot?.let {
+                        emitter.onNext(it)
+                    }
+                }
+        }
 ```
 
 ##### Flowable 타입
