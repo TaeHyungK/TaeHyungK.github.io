@@ -26,6 +26,7 @@ oldList와 newList 리스트의 차이를 계산하고 oldList를 newList로 변
 업데이트 작업 목록은 newList가 Insert, Remove, Update 모두 포함된다.
 
 #### 리스트 아이템이 변경되는 갯수 마다의 시간값
+
 |Action|avg|median|
 |-----------------------|-----------|-----------|
 |100 items and 10 modifications|0.39 ms|0.35 ms|
