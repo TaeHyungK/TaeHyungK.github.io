@@ -17,6 +17,12 @@ author: TaeHyungK
 
 oldList와 newList 리스트의 차이를 계산하고 oldList를 newList로 변환하는 업데이트 작업 목록을 출력할 수 있는 유틸성 클래스이다.
 
+
+
+
+
+
+
 업데이트 작업 목록은 newList가 Insert, Remove, Update 모두 포함된다.
 
 #### 리스트 아이템이 변경되는 갯수 마다의 시간값
