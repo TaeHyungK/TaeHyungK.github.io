@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[RxJava2] RxJava2와 Observable"
+title:  "[RxJava2] RxJava2 - Rx란 ?"
 categories: Android RxJava2
 tags: Kotlin
 author: TaeHyungK
@@ -89,7 +89,43 @@ Observable											// Observable 객체
 	}
 ```
 
-Observable 각 타입에 대해 자세히 알아보겠습니다.
+RxJava를 기준으로 Rx를 쓰는 가장 기본적인 방법에 대해 알아보겠습니다.
+
+##### Rx의 주요 단계
+* 이벤트 혹은 데이터 스트림을 만들어내는 **Create**
+* Rx의 다양한 Operator들과 Compose, Transform을 이용한 **Combine**
+* 만들어진 Observable을 Subscribe 하여 작업을 수행하는 **Listen**
+
+위에서 나타난 3 가지 작업 즉, **데이터 스트림을 만들어 내고, 그것들을 조합, 가공하여 구독하는 것**이 Rx를 쓰는 가장 기본적인 방법이 되겠습니다.
+
+```kotlin
+Observable
+    // create 부분
+    .create { emitter ->
+        val list = mutableListOf("hello", "rx", "world")
+
+        list.forEach { item ->
+            emitter.onNext(item)
+
+            if (item == "world") emitter.onError(RuntimeException("throw error"))
+        }
+
+        emitter.onComplete()
+    }
+    // combine 부분
+    .map { item ->
+        item + "!"
+    }
+    // listen 부분
+    .subscribe(
+        System.out:println,
+        throwable -> System.out.println(throwable.toString()),
+        () -> System.out.println("complete")
+    )
+```
+
+
+Create 부분에서 사용되는 Observable 각 타입에 대해 자세히 알아보겠습니다.
 
 ##### Observable 타입
 Rx의 기본적인 단위입니다. Observable로 부터 발생되는 이벤트는 `onNext`, `onError`, `onComplete` 세가지로 각 이벤트들이 발생되는 케이스는 아래와 같습니다.<br>
@@ -205,10 +241,52 @@ Maybe.just("Hello World")
             )
 ```
 
+다음으로 Combine 부분에 대하여 알아보겠습니다.
+
+##### Combine
+Combine 부분은 Rx의 다양한 Operator들과 Transfrom을 이용해 데이터 혹은 이벤트 스트림을 조합하는 부분입니다.
+
+예시에서는 Operator 중에서 자주 사용하는 `map` 이라는 Operator를 사용했습니다.
+
+```kotlin
+Observable
+    .create (...)
+    // combine 부분
+    .map { item ->
+        item + "!"
+    }
+```
+
+map operator는 **T 타입을 인풋으로 받아 객체를 가공하여 R 타입으로 반환**시키는 일을 합니다. 위 예시에서 T 타입은 **item(: String)**에 해당하고 R 타입은 **item에 "!"가 붙은 String** 에 해당합니다.
+
+마지막으로 Listene 부분에 대하여 알아보겠습니다.
+
+##### Listen
+Listene은 우리가 Create에서 만들고 Combine에서 가공한 Observable 데이터 스트림을 Subscribe 하는 부분입니다. 즉, 우리가 만든 데이터 혹은 이벤트 스트림을 사용하게 되는 부분입니다.
+
+```kotlin
+Observable
+    .create (...)
+    .map (...)
+    // listen 부분
+    .subscribe(
+        System.out:println, // onNext()
+        throwable -> System.out.println(throwable.toString()), // onError()
+        () -> System.out.println("complete") // onComplete()
+    )
+```
+
+위 예제에서 **subscribe**는 데이터를 받는 `onNext()`, Throwable을 핸들링 하는 `onError()`, 완료를 전달받는 `onComplete()` 부분으로 이루어져있습니다.
+
+##### 글을 마치며
+Rx라는 개념을 건너건너 들으면서 요새 대세이기 때문에 꼭 학습해야 하는 기술 중 하나라고만 생각을 했었는데 좋은 기회가 생겨 실제로 학습하며 사용해본 것은 처음이였네요.. ~~(지속 가능한 개발자가 되기 위한 노력 더하자..! 😭)~~ 개인적으로 Rx를 통해 비동기 처리와 스레드 스케줄링을 쉽게 한다는 점이 정말 좋은 기술이구나라는 느낌을 많이 받았고 그러면서 평소에 많이 사용했던 데이터의 흐름과는 조금 다른 생각을 갖게 하는 기술(?) 패러다임(?) 이라 러닝 커브가 낮은 기술은 아니라는 생각이 들었네요.. Rx를 이해하는 데에 가장 중요한 점은 데이터의 흐름에 대한 생각을 바꾸는 것이 아닐까 싶네요. 그 생각을 바꾸는 것이 쉽지는 않겠지만 앞으로는 AsyncTask ~~(어차피 deprecated 되어버려서 쓰지도 못하는..)~~는 생각도 안날 만큼 자주, 많이 사용될 기술인 건 확실한 것 같습니다 😎!  ~~(코루틴도 공부하자 😭)~~
 
 
 ###### 참고 사이트
+* [ReactiveX](http://reactivex.io/)
 * [WIKIPEDIA: Reactive Programming](https://en.wikipedia.org/wiki/Reactive_programming)
 * [WIKIPEDIA: Functional Programming](https://en.wikipedia.org/wiki/Functional_programming)
 * [박스여우: RxJava2의 5가지 Ovservable](https://boxfoxs.tistory.com/396)
 * [꿀맛코딩: What is BackPressure? (BackPressure 란?)](https://sweetcoding.tistory.com/61)
+* [Developer88: RxAndroid 이해하기 Part1](https://developer88.tistory.com/1)
+* [오재환의 아는척: Rx 그것은 무엇인가](https://ojh102.tistory.com/1)
