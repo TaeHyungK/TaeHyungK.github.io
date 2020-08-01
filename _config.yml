@@ -52,4 +52,4 @@ gems: [jekyll-paginate]
 paginate: 6
 
 # google analytics setting
-google_analytics: 'UA-168858803-1'
+google_analytics_id: UA-168858803-1
