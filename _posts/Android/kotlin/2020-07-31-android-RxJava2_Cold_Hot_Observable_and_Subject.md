@@ -69,7 +69,48 @@ Hot Observable에 대해 정리해보면,
 그렇다면, 일반적인 Observable(== Cold Observable)을 어떻게 Hot Observable로 바꾸는 것일까?
 
 
-#### 정답은 바로 `Subject` 클래스입니다.
+#### 정답은 바로 `ConnectableObservable` 과 `Subject` 클래스입니다.
+
+### ConnectableObservable
+
+ConnecatableObservable은 Cold Observable을 Hot Observable로 변환이 가능한 옵저버블입니다.
+
+해당 옵저버블의 가장 큰 특징은 데이터 배출 시 `subscribe()` 메소드를 사용하기에 앞서 `connect()` 메소드를 호출하여 Hot Observable로 활성화 하여 사용이 가능하다는 점입니다.
+
+다음 예시를 보겠습니다.
+
+```kotlin
+val connectableObservable = listOf("String 1","String 2","String 3","String 4","String 5").toObservable()
+            .publish()//1
+
+connectableObservable.
+        subscribe { println("Subscription 1: $it") }//2
+
+connectableObservable.map(String::reversed) // 3
+        .subscribe { println("Subscription 2 $it")}//4
+
+connectableObservable.connect()//5
+
+connectableObservable.
+        subscribe { println("Subscription 3: $it") } //6 구독을 받지못함
+
+// 결과는
+Subscription 1: String 1
+Subscription 2 1 gnirtS
+Subscription 1: String 2
+Subscription 2 2 gnirtS
+Subscription 1: String 3
+Subscription 2 3 gnirtS
+Subscription 1: String 4
+Subscription 2 4 gnirtS
+Subscription 1: String 5
+Subscription 2 5 gnirtS
+```
+위 예시에서 1번 영역을 보면 `publish()` 라는 메소드가 있는데 해당 메소드를 이용하여 Cold Observable을 Hot Observable로 변환이 되게 됩니다.<br> 이후에 5번의 `connect()` 메소드를 호출하여 2,4번의 옵저버에서 모두 데이터가 처리되는 것을 볼 수 있습니다.
+
+<br>
+다음으로 Cold Observable을 Hot Observable로 변환할 수 있는 또다른 방법인 Subject 클래스에 대해서 알아보겠습니다.
+
 
 #### Subject
 
@@ -189,5 +230,6 @@ Subscriber #2: data: 5
 * [Developer88: Hot Observable 과 Cold Observable은 무엇인가요?](https://developer88.tistory.com/86)
 * [Progmming Summary Notes: Rx의 Hot과 Cold에 대해](http://lonpeach.com/2019/09/29/UniRx-Hot-Cold/#hot%EA%B3%BC-cold-%EA%B5%AC%EB%B6%84%EB%B2%95)
 * [Progmming Summary Notes: [Reactive Extensions] Hot 변환은 어떤 때에 필요한가?](http://lonpeach.com/2019/10/13/UniRx-When-is-a-Hot-Conversion/)
-* [Observable -12 ( 뜨거운 Observable)](https://beomseok95.tistory.com/15)
+* [범석의 안드로이드 메모장: Observable -12 ( 뜨거운 Observable)](https://beomseok95.tistory.com/15)
 * [돼지왕 왕돼지 놀이터: [RxJava] #2 Observable 처음 만들기](https://aroundck.tistory.com/6223)
+* [3-02. 핫 옵저버블 & 콜드 옵저버블 - gists](https://gist.github.com/SODA1127/7ce11958f0914a7d09fb5ba68720c364)
