@@ -38,7 +38,7 @@ RxJava에서는 옵저버블을 생성하는 다양한 방법을 제공하고 �
 심지어는 아무것도 발행하지 않고 종료하거나 에러를 발행하는 옵저버블을 생성할 수도 있습니다.
 
 
-##### Observable.create()
+#### Observable.create()
 
 `create()` 함수는 옵저버블 생성 시 가장 많이 사용하는 함수 중 하나입니다.
 이 함수는 `OnSubscribe` 객체를 파라미터로 가지고 있어 구독이 발생하면 이 객체의 `call()` 함수가 실행되게 됩니다.
@@ -71,7 +71,7 @@ fun getBoardList(): Observable<QuerySnapshot> {
 
 <br><br><br>
 
-##### Observable.just()
+#### Observable.just()
 
 `just()` 함수는 인자로 넣은 데이터를 바로 방출할 때 사용되는 함수입니다.<br>
 내부적으로 ScalarDisposable을 사용하고있어 `onNext()`를 통해 데이터를 방출하고 `onComplete()`까지 호출하게 됩니다.
@@ -137,7 +137,7 @@ Main Thread 에서 돌고있는 것을 확인 할 수 있습니다.<br>
 
 <br><br><br>
 
-##### Observable.defer()
+#### Observable.defer()
 
 `defer()` 함수는 지연 초기화를 제공하는 함수입니다. 즉, **구독이 발생할 때 비로소 옵저버블을 생성**하게 하는 함수입니다.<br>
 그렇기 때문에 다른 연산자들은 연산자를 선언하는 순간 메모리에 할당되지만 `defer()`는 subscribe가 호출될 때 할당되게 되며 각각의 옵저버에게 매번 새로운 옵저버블을 생성시키게 됩니다.
