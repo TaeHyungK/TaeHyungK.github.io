@@ -110,12 +110,12 @@ repository.getUser(user.id)
     })
 ```
 
+<br><br><br>
 
 #### Filtering
 
 Filtering Operator는 업스트림의 데이터들 중 특정 값들을 수신하지 않기 위해서 존재하는 operator 입니다. 이 operator를 사용하면 사용자가 이벤트를 여러번 발생시켰을 때, 특정 기준에 의해 이벤트를 최소의 이벤트만 송신하는 등의 기능을 구현할 수 있습니다.
 
-<br>
 
 ##### Debounce
 
