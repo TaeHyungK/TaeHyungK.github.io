@@ -27,8 +27,8 @@ RxJava의 연산자는 Creating, Transforming, Filtering, Combining, Observable 
 
 <br><br>
 ##### 먼저 보면 좋은 글
-* [[RxJava2] RxJAva2 - Rx란 ?](https://taehyungk.github.io/2020/07/29/android-RxJava2_and_Observable/)
-* [[RxJava2] 기본 연산자](https://taehyungk.github.io/2020/08/04/android-RxJava2_Operator/)
+* [[RxJava2] RxJAva2 - Rx란 ?](https://taehyungk.github.io/2020/07/29/android-RxJava2-nd-Observable/)
+* [[RxJava2] 기본 연산자](https://taehyungk.github.io/2020/08/04/android-RxJava2-Operator/)
 
 <br><br>
 
