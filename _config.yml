@@ -9,7 +9,7 @@
 title: 🧑🏻‍💻탤로우 월드
 brief-intro: Android Developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://taehyungk.github.io" # the base hostname & protocol for your site
+url: https://taehyungk.github.io # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
