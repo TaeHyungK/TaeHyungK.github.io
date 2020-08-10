@@ -8,7 +8,7 @@
 # Site settings
 title: 🧑🏻‍💻탤로우 월드
 brief-intro: Android Developer
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: /
 url: https://taehyungk.github.io
 
 permalink: /:year/:month/:day/:title/
