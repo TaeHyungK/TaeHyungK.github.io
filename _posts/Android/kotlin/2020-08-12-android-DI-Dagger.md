@@ -109,7 +109,7 @@ Component에 연결되어 의존성 객체를 생성합니다. 생성 후 Scope�
 
 Inject로 의존성을 요청하면 Subcomponent에서부터 Module을 검색하고, Scope에 따라 객체를 가져와 주입합니다.
 
-Dagger에 대해 알아보았으니, 프로젝트에 사용할 Hilt에 대해 알아보겠습니다.
+Dagger에 대해 알아보았으니, 다음에는 Hilt에 대해서 알아보겠습니다.
 
 
 <br><br><br>
