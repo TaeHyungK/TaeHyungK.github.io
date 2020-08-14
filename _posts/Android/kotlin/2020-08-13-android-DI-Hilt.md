@@ -307,10 +307,8 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
 
 ###### 참고 사이트
 * [Android Developer](https://developer.android.com/training/dependency-injection/hilt-android)
-* [Seungmin — maryang: DI 기본개념부터 사용법까지, Dagger2 시작하기](https://medium.com/@maryangmin/di-%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%82%AC%EC%9A%A9%EB%B2%95%EA%B9%8C%EC%A7%80-dagger2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-3332bb93b4b9)
 * [알고싶은 승민: [Hilt] 안드로이드 Hilt 사용해보기, (아직 쓰지 말자...)](https://greedy0110.tistory.com/60)
 * [루크의 코드테라피: Dagger - Hilt 간보기](https://two22.tistory.com/4)
 * [allocProc: Android DI with Hilt - Hilt를 이용한 의존성 주입](https://medium.com/@jaeyeong951/android-di-with-hilt-hilt%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85-5076d9e9c46b)
 * [찰스의 안드로이드: [Hilt] 4. 프로젝트에 Hilt 적용하기](https://www.charlezz.com/?p=44322)
 * [HYPERCONNECT 기술 블로그: Dagger Hilt로 안드로이드 의존성 주입 시작하기](https://hyperconnect.github.io/2020/07/28/android-dagger-hilt.html)
-* [큐우의 개발이야기: [Android][RxJava] RxJava와 RxAndroid [1 / 2]](https://faith-developer.tistory.com/21)

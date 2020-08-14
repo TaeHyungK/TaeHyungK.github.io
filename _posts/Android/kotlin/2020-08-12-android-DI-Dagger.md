@@ -115,11 +115,5 @@ Dagger에 대해 알아보았으니, 다음에는 Hilt에 대해서 알아보겠
 <br><br><br>
 
 ###### 참고 사이트
-* [한로니: RxJava, Observable 생성하기](https://brunch.co.kr/@lonnie/18)
-* [Owl Life: [RxJava] create, just, defer와 fromCallable 차이점 & 샘플코드](https://softwaree.tistory.com/36)
-* [범석의 안드로이드 메모장: Observable -7 (fromCallable함수)](https://beomseok95.tistory.com/10)
-* [태임쓰의 개발블로그: [RxJava2] #3. 리액티브 연산자 - 기초 (map, filter, reduce)](https://taeiim.tistory.com/entry/RxJava2-3-%EB%A6%AC%EC%95%A1%ED%8B%B0%EB%B8%8C-%EC%97%B0%EC%82%B0%EC%9E%90-%EA%B8%B0%EC%B4%88-map-filter-reduce)
-* [Medium.CCanary Park: RxJAVA, Part 1 : 기초](https://medium.com/@LIP/rxjava-29cfb3ceb4ca)
-* [아는 개발자: RxJava - flatMap](https://selfish-developer.com/entry/RxJava-flatMap)
-* [Zero to Hero: RxJava - Filter Operator편](https://myungjunchae.github.io/android/rxjava/rxjava-filter/)
-* [범석의 안드로이드 메모장: 리액티브연산자[결합 연산자]- 16(merge함수,concat함수)](https://beomseok95.tistory.com/36)
+* [VictoryWoo: [Android] DI에 대해서](https://woovictory.github.io/2019/07/08/DI/)
+* [Seungmin — maryang: DI 기본개념부터 사용법까지, Dagger2 시작하기](https://medium.com/@maryangmin/di-%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90%EB%B6%80%ED%84%B0-%EC%82%AC%EC%9A%A9%EB%B2%95%EA%B9%8C%EC%A7%80-dagger2-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-3332bb93b4b9)
