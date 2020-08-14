@@ -9,6 +9,21 @@ author: TaeHyungK
 * content
 {:toc}
 
+### Disposable
+
+RxJava1에서 사용되던 `Subscription`이 RxJava2에서 **Disposable**로 바뀌었습니다.
+
+옵저버블을 통해 데이터 스트림을 발행하고 `subscribe()` 함수들을 사용하여 구독할 때에
+이 함수가 반환하는 값이 Disposable 인터페이스의 객체 입니다.
+
+Disposable의 `dispose()` 함수를 통해 옵저버블에게 더이상 데이터를 발행하지 않도록 할 수 있습니다.
+
+즉, 이를 통해 옵저버블을 사용함으로서 발생할 수 있는 메모리 누수를 막을 수 있습니다.
+
+
+
+
+
 ##### dispose()
 * 옵저버블에게 더이상 데이터를 발행하지 않도록 구독을 해지하는 함수입니다.
 * 옵저버블이 onComplete() 알림을 보냈을 때 자동으로 `dispose()`를 호출해 옵저버블과 구독자의 관계를 끊게 됩니다.
@@ -91,3 +106,5 @@ compositeDisposable.add(
 * [Beom Dev Log: 안드로이드의 RxJava 활용 - 12(메모리누수 막기)](https://beomseok95.tistory.com/60)
 * [IOS를 Java: [RxAndroid2] 메모리 누수를 잡아보자. Disposable, RxLifeCycle, CompositeDisposable](https://altongmon.tistory.com/768)
 * [ReactiveX: JavaDocs](http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/disposables/Disposable.html)
+* [레이니스트(뱅크샐러드) 기슬블로그: RxJava2를 도입하며](https://www.theteams.kr/teams/238/post/64047)
+* [Niklas Baudy: RxJava 2 Disposable — Under the hood](https://medium.com/@vanniktech/rxjava-2-disposable-under-the-hood-f842d2373e64)
