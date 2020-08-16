@@ -1,8 +1,8 @@
 ---
-layout: post
 title:  "[회고] 2019년을 돌아보며"
-categories: 회고
-tags:
+date: 2020-01-01 00:20:01 +0100
+categories: [회고]
+tags: [2019]
 author: TaeHyungK
 ---
 
