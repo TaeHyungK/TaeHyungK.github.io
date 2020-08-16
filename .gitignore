@@ -119,4 +119,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# hidden files
+./
+
 # End of https://www.gitignore.io/api/macos,intellij
