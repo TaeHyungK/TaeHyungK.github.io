@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 코틀린 타입 시스템"
-categories: [Android, Kotlin IN Action]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 

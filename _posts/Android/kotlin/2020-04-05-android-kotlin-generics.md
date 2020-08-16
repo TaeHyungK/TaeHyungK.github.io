@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 제네릭스"
-categories: [Android, Kotlin IN Action]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 

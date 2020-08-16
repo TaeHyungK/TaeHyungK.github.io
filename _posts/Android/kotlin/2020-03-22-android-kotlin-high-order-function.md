@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 코틀린 고차 함수"
-categories: [Android, Kotlin IN Action]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 

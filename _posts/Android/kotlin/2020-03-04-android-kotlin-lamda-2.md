@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 람다로 프로그래밍 2탄"
-categories: [Android, Kotlin IN Action]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 

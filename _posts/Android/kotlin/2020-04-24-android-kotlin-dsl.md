@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] DSL 만들기"
-categories: [Android, Kotlin IN Action]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 

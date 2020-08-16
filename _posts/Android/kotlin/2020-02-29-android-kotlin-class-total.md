@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] Chapter4. 클래스, 객체, 인터페이스 총정리"
-categories: [Android, Kotlin IN Action]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 

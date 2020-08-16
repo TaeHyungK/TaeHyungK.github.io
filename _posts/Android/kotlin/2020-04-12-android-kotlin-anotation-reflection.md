@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 애노테이션과 리플렉션"
-categories: [Android, Kotlin IN Action]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 

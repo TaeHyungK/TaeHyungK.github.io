@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 코틀린 기초 - enum과 when"
-categories: [Android, Kotlin IN Action]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 
