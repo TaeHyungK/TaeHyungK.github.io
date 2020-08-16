@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 클래스, 객체, 인터페이스 1탄"
-categories: [Android]
+categories: [Android, Kotlin IN Action]
 tags: [Kotlin]
 ---
 

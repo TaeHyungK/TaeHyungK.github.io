@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 코틀린 맛보기"
-categories: [Android]
+categories: [Android, Kotlin IN Action]
 tags: [Kotlin]
 ---
 

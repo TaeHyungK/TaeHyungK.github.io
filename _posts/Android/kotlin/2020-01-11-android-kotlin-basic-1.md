@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] 코틀린 기초 - 함수와 변수"
-categories: [Android]
+categories: [Android, Kotlin IN Action]
 tags: [Kotlin]
 ---
 

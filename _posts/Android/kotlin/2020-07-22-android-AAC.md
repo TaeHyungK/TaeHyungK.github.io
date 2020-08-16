@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[Android] AAC (Android Architecture Component"
-categories: [Android]
+title:  "[Android] AAC (Android Architecture Component)"
+categories: [Android, AAC]
 tags: [Architecture]
 ---
 

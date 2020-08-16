@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Android] let, apply, run, with 함수"
-categories: [Android]
+categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 

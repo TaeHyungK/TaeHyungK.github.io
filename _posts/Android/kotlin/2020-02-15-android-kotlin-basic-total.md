@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Kotlin] Chapter2. 코틀린 기초 총정리"
-categories: [Android]
+categories: [Android, Kotlin IN Action]
 tags: [Kotlin]
 ---
 
