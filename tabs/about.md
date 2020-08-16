@@ -8,4 +8,9 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+### Info
+
+ - GitHub：[TaeHyungK](https://github.com/TaeHyungK)
+ - E-Mail：[xogud3125@naver.com](mailto:xogud3125@naver.com)
+
+### [📌 Resume](https://github.com/TaeHyungK/Resume)
