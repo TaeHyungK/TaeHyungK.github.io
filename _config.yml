@@ -10,7 +10,7 @@
 
 title: 🧑🏻‍💻탤로우 월드                          # the main title
 
-tagline: Try hard, try hard! 🤓  # it will display as the sub-title
+tagline: Try hard, try hard!  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   # A minimal, portfolio, sidebar,
@@ -22,7 +22,7 @@ url: 'https://taehyungk.github.io'
 
 author: TaeHyungK                  # change to your full name
 
-avatar: /assets/img/sample/avatar.jpg   # support internet resources
+avatar: /assets/img/sample/avatar.jpeg   # support internet resources
 
 github:
   username: TaeHyungK             # change to your github username
@@ -47,7 +47,7 @@ social:
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
 # change below value to '/projectname'.
-baseurl: '/taehyungk.github.io'
+baseurl: '/'
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Seoul
