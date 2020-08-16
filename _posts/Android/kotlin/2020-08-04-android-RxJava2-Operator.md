@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[RxJava2] 기본 연산자"
-categories: Android RxJava2
-tags: Kotlin
-author: TaeHyungK
+categories: [Android, RxJava2]
+tags: [Kotlin]
 ---
 
 * content

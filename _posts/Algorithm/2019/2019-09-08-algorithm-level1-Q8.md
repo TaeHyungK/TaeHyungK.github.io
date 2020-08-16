@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[알고리즘] 프로그래머스 > 나누어 떨어지는 숫자 배열"
-categories: Algorithm
-tags: 프로그래머스 Level1
-author: TaeHyungK
+categories: [Algorithm]
+tags: [프로그래머스, Level1]
 ---
 
 * content

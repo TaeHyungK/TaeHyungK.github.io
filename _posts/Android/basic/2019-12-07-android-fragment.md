@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] Fragment"
-categories: Android
-tags: CS
-author: TaeHyungK
+categories: [Android]
+tags: [CS]
 ---
 
 * content

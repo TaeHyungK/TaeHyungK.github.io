@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] Player - 스트리밍 종류, 동작방식 및 상태"
-categories: Android
-tags: CS
-author: TaeHyungK
+categories: [Android]
+tags: [CS]
 ---
 
 * content

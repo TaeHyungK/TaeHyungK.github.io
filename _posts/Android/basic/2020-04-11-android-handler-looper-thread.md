@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] Handler, Looper, Thread에 대하여"
-categories: Android
-tags: CS
-author: TaeHyungK
+categories: [Android]
+tags: [CS]
 ---
 
 * content

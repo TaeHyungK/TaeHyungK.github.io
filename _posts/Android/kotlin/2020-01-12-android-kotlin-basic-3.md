@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Kotlin] 코틀린 기초 - enum과 when"
-categories: Android
-tags: Kotlin
-author: TaeHyungK
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

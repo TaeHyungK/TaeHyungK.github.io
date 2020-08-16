@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[RxJava2] Disposable - 메모리 누수를 막아보자"
-categories: Android RxJava2
-tags: Kotlin
-author: TaeHyungK
+categories: [Android, RxJava2]
+tags: [Kotlin]
 ---
 
 * content

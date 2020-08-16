@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "[Android] 메모리 관리 - OOM(Out Of Memory)"
-categories: Android
-tags: CS
-author: TaeHyungK
+categories: [Android]
+tags: [CS]
+author: [TaeHyungK]
 ---
 
 * content

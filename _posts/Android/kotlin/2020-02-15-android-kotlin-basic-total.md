@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Kotlin] Chapter2. 코틀린 기초 총정리"
-categories: Android
-tags: Kotlin
-author: TaeHyungK
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

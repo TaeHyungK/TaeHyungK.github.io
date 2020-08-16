@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Kotlin] 코틀린 연산자 오버로딩과 기타 관례"
-categories: Android
-tags: Kotlin
-author: WooVictory
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

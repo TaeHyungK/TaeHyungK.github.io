@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] 4대 컴포넌트"
-categories: Android
-tags: CS
-author: TaeHyungK
+categories: [Android]
+tags: [CS]
 ---
 
 * content

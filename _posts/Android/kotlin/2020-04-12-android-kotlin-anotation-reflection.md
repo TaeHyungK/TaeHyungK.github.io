@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Kotlin] 애노테이션과 리플렉션"
-categories: Android
-tags: Kotlin
-author: WooVictory
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Kotlin] 코틀린 타입 시스템"
-categories: Android
-tags: Kotlin
-author: iyj9328
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

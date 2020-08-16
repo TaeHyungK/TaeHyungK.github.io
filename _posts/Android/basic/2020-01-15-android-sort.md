@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] 정렬 - Comparator, Comparable, 버블 정렬, 선택 정렬, 퀵 정"
-categories: Android
-tags: CS
-author: TaeHyungK
+categories: [Android]
+tags: [CS]
 ---
 
 * content

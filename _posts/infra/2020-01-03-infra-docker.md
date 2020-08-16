@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Infra] Docker"
-categories: Infra
-tags: docker
-author: TaeHyungK
+categories: [Infra]
+tags: [docker]
 ---
 
 * content

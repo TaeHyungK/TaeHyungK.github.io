@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[DI] Hilt 로 Dagger 를 쉽게 쓰자 !"
-categories: Android DI
-tags: Kotlin
-author: TaeHyungK
+categories: [Android, DI]
+tags: [Kotlin]
 ---
 
 * content

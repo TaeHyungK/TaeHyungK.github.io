@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "[알고리즘] 프로그래머스 > 같은 숫자는 싫어"
-categories: Algorithm
-tags: 프로그래머스 Level1
+categories: [Algorithm]
+tags: [프로그래머스, Level1]
 author: TaeHyungK
 ---
 

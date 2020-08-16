@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] 인텐트와 인텐트 필터"
-categories: Android
-tags: CS
-author: TaeHyungK
+categories: [Android]
+tags: [CS]
 ---
 
 * content

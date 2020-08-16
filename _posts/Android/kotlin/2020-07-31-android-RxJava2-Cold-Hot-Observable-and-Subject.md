@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[RxJava2] Cold Observable과 Hot Observable, 그리고 Subject"
-categories: Android RxJava2
-tags: Kotlin
-author: TaeHyungK
+categories: [Android, RxJava2]
+tags: [Kotlin]
 ---
 
 * content

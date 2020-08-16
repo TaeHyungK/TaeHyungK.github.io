@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[알고리즘] 프로그래머스 > 체육복"
-categories: Algorithm
-tags: 프로그래머스 Level1
-author: TaeHyungK
+categories: [Algorithm]
+tags: [프로그래머스, Level1]
 ---
 
 * content

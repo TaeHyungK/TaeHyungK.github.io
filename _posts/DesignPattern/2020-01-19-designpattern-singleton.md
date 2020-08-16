@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[디자인패턴] 싱글톤 패턴"
-categories: 디자인패턴
-tags: CS
-author: TaeHyungK
+categories: [디자인패턴]
+tags: [CS]
 ---
 
 * content

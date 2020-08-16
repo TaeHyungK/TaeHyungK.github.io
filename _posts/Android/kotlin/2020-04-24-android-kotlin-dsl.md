@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Kotlin] DSL 만들기"
-categories: Android
-tags: Kotlin
-author: TaeHyungK
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

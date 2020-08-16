@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Kotlin] 제네릭스"
-categories: Android
-tags: Kotlin
-author: iyj9328
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

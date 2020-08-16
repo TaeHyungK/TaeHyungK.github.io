@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Kotlin] 함수 정의와 호출 1탄"
-categories: Android
-tags: Kotlin
-author: TaeHyungK
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

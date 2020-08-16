@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] AAC (Android Architecture Component"
-categories: Android
-tags: Architecture
-author: TaeHyungK
+categories: [Android]
+tags: [Architecture]
 ---
 
 * content

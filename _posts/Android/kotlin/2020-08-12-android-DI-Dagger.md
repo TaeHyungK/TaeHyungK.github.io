@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[DI] 의존성 주입? Dagger?"
-categories: Android DI
-tags: Kotlin
-author: TaeHyungK
+categories: [Android, DI]
+tags: [Kotlin]
 ---
 
 * content

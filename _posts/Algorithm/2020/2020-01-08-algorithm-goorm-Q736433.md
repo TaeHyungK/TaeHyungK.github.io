@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[알고리즘] 구름 > 수의 비밀"
-categories: Algorithm
-tags: 구름EDU
-author: TaeHyungK
+categories: [Algorithm]
+tags: [구름EDU]
 ---
 
 * content

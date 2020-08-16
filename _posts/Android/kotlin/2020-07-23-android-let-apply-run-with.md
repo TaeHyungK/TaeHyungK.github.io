@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] let, apply, run, with 함수"
-categories: Android
-tags: Kotlin
-author: TaeHyungK
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

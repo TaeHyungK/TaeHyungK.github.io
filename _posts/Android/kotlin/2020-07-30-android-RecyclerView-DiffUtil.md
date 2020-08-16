@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] DiffUtil을 이용해 RecyclerView 성능을 향상 시켜보자"
-categories: Android
-tags: Kotlin
-author: TaeHyungK
+categories: [Android]
+tags: [Kotlin]
 ---
 
 * content

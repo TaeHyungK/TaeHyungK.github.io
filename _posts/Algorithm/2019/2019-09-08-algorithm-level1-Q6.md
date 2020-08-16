@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[알고리즘] 프로그래머스 > 가운데 글자 가져오기"
-categories: Algorithm
-tags: 프로그래머스 Level1
-author: TaeHyungK
+categories: [Algorithm]
+tags: [프로그래머스, Level1]
 ---
 
 * content

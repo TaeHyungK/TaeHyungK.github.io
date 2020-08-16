@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[Android] Reflection"
-categories: Android
-tags: CS
-author: TaeHyungK
+categories: [Android]
+tags: [CS]
 ---
 
 * content

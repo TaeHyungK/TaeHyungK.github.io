@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[RxJava2] Creating Observables - create, just, defer, fromCallable"
-categories: Android RxJava2
-tags: Kotlin
-author: TaeHyungK
+categories: [Android, RxJava2]
+tags: [Kotlin]
 ---
 
 * content

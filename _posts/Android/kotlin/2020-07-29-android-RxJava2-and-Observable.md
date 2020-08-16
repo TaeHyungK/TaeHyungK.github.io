@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "[RxJava2] RxJava2 - Rx란 ?"
-categories: Android RxJava2
-tags: Kotlin
-author: TaeHyungK
+categories: [Android, RxJava2]
+tags: [Kotlin]
 ---
 
 * content
