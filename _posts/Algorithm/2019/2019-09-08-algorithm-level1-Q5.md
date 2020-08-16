@@ -5,9 +5,6 @@ categories: [Algorithm]
 tags: [프로그래머스, Level1]
 ---
 
-* content
-{:toc}
-
 > Java API를 알고 있어 쉽게 풀 수 있었던 문제였다.
 
 [프로그래머스 문제](https://programmers.co.kr/learn/courses/30/lessons/12901) | [소스코드](https://github.com/TaeHyungK/algorithm/blob/master/src/programmers/level1/PGLevel1Q5.java)

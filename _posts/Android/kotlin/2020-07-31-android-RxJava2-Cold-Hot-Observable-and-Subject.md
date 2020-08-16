@@ -5,9 +5,6 @@ categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### Hot Observable VS Cold Observable
 
 간단하게 말하자면 Hot Observable은 뜨거워서 데이터를 바로 흘려 보내는 Observable 이고,

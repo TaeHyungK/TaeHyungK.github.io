@@ -5,9 +5,6 @@ categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### RxJava2
 
 #### RxJava를 배우기에 앞서 Rx란 무엇인지에 알아보자.

@@ -5,9 +5,6 @@ categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### RxJava2의 기본 연산자
 
 #### RxJava에서 사용되는 기본적인 연산자에 대해서 알아보자.

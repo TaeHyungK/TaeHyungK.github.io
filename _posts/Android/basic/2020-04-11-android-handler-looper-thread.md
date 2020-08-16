@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "[Android] Handler, Looper, Thread에 대하여"
-categories: [Android]
+categories: [Android, CS]
 tags: [CS]
 ---
-
-* content
-{:toc}
 
 ### 안드로이드에서는 왜 Main Thread(UI Thread) 에서만 UI를 그릴 수 있을까?
 

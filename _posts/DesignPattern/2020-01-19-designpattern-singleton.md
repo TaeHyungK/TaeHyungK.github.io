@@ -5,9 +5,6 @@ categories: [디자인패턴]
 tags: [CS]
 ---
 
-* content
-{:toc}
-
 ### 싱글톤(Singleton) 패턴
 
  - 한번 생성하면 해당 클래스를 사용하는 곳은 하나의 객체로 사용하도록 하는 패턴

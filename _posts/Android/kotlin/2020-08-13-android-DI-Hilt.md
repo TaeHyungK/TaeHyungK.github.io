@@ -5,9 +5,6 @@ categories: [Android, DI]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### Hilt
 
 Hilt는 Dagger 기반의 DI 라이브러리로 Annotation을 이용한 컴파일 타임 generated code로 의전송 주입을 구현하였습니다.

@@ -5,9 +5,6 @@ categories: [Android, Kotlin]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### let, apply, run, with 함수
 
 코틀린에서 제공하는 여러 함수 중 비슷하면서도 조금 다른.. 헷갈리는 함수 4가지에 대해 알아보자.

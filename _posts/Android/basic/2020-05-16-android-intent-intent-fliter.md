@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "[Android] 인텐트와 인텐트 필터"
-categories: [Android]
+categories: [Android, CS]
 tags: [CS]
 ---
-
-* content
-{:toc}
 
 ### 인텐트와 인텐트 필터에 대해 알아보자
 

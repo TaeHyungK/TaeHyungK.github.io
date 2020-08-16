@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "[Android] ConstraintLayout의 음수 마진(Negative Margin)"
-categories: [Android]
+categories: [Android, Tips]
 tags: [Tips]
 ---
-
-* content
-{:toc}
 
 ### 음수 마진(Negative Margin)
 

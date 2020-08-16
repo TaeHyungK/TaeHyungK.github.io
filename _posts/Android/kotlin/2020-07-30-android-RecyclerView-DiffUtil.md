@@ -5,9 +5,6 @@ categories: [Android]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### DiffUtil
 
 #### RecyclerView의 성능을 향상시킬 수 있는 DiffUtil에 대해 알아보자.

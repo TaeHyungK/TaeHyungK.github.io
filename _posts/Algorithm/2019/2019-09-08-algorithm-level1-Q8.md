@@ -5,9 +5,6 @@ categories: [Algorithm]
 tags: [프로그래머스, Level1]
 ---
 
-* content
-{:toc}
-
 > Arrays의 stream, filter를 이용하면 불필요한 연산을 하지 않아도 되었던 문제
 > 해당 함수를 구현할 줄 안 다음에 비로소 사용하는 것이 좋을 것으로 보인다.
 

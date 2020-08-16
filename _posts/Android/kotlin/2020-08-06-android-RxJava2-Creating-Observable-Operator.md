@@ -5,9 +5,6 @@ categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### Creating Observables - create, just, defer, fromCallable
 
 #### RxJava2의 Observble 생성을 위한 Operator 중 create, defer, fromCallable에 대해 알아보자.

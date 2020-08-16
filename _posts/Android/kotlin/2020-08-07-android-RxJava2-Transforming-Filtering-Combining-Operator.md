@@ -5,9 +5,6 @@ categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### Observable Operator - Transforming, Filtering, Combining
 
 #### RxJava2의 Observable 중 Transforming, Filtering, Combining 에 대해 알아보자.

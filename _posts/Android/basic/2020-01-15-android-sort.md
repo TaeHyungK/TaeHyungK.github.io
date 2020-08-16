@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "[Android] 정렬 - Comparator, Comparable, 버블 정렬, 선택 정렬, 퀵 정"
-categories: [Android]
+categories: [Android, CS]
 tags: [CS]
 ---
-
-* content
-{:toc}
 
 ### Comparator와 Comparable
 

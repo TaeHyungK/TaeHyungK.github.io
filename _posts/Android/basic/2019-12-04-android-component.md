@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "[Android] 4대 컴포넌트"
-categories: [Android]
+categories: [Android, CS]
 tags: [CS]
 ---
-
-* content
-{:toc}
 
 ### Activity
 

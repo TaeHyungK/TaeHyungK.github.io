@@ -5,9 +5,6 @@ categories: [Algorithm]
 tags: [구름EDU]
 ---
 
-* content
-{:toc}
-
 [문제 출처](https://edu.goorm.io/learn/lecture/15551/%EB%A7%A4%EC%A3%BC-%EB%B0%B0%EC%86%A1%EB%B0%9B%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%9C%84%ED%81%B4%EB%A6%AC-%EB%B9%84%ED%83%80%EC%95%8C%EA%B3%A0-%EC%8B%9C%EC%A6%8C2/lesson/736433/09%EC%9B%94-1%EC%A3%BC%EC%B0%A8-%EC%88%98%EC%9D%98-%EB%B9%84%EB%B0%80-1) | [소스코드](https://github.com/TaeHyungK/algorithm/blob/master/src/goorm/Q736433.java)
 
 > 회귀를 이용해 입력받은 값을 계속 나누는 방법으로 문제를 해결하였다.

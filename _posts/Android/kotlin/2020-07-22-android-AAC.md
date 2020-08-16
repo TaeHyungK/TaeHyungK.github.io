@@ -5,9 +5,6 @@ categories: [Android, AAC]
 tags: [Architecture]
 ---
 
-* content
-{:toc}
-
 ### AAC (Android Architecture Component)
 
 #### 사용 목적

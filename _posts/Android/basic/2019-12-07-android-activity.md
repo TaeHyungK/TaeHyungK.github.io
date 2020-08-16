@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "[Android] Activity"
-categories: [Android]
+categories: [Android, CS]
 tags: [CS]
 ---
-
-* content
-{:toc}
 
 ### Activity
 

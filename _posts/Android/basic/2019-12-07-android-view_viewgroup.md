@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "[Android] View와 ViewGroup"
-categories: [Android]
+categories: [Android, CS]
 tags: [CS]
 ---
-
-* content
-{:toc}
 
 ### View와 ViewGroup
 

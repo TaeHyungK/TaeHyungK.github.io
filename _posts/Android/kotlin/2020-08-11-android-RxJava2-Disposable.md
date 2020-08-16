@@ -5,9 +5,6 @@ categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### Disposable
 
 RxJava1에서 사용되던 `Subscription`이 RxJava2에서 **Disposable**로 바뀌었습니다.

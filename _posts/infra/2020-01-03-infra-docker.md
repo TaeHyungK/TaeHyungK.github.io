@@ -5,9 +5,6 @@ categories: [Infra]
 tags: [docker]
 ---
 
-* content
-{:toc}
-
 ### 도커(Docker)의 기본 개념과 간단한 실습
 
 > 이미지와 컨테이너

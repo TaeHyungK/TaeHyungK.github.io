@@ -5,9 +5,6 @@ categories: [Android, DI]
 tags: [Kotlin]
 ---
 
-* content
-{:toc}
-
 ### DI의 기본 개념 이해하기
 
 #### DI와 IoC

@@ -1,13 +1,9 @@
 ---
 layout: post
 title:  "[Android] 메모리 관리 - OOM(Out Of Memory)"
-categories: [Android]
+categories: [Android, CS]
 tags: [CS]
-author: [TaeHyungK]
 ---
-
-* content
-{:toc}
 
 ### 메모리 관리(OOM(OutOfMemory))
 - Bitmap

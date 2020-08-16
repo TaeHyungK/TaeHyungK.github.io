@@ -5,9 +5,6 @@ categories: [Algorithm]
 tags: [프로그래머스, Level1]
 ---
 
-* content
-{:toc}
-
 > 너무 복잡하게 생각하지말고 하나하나 차근차근 풀어야 된다!!
 
 [프로그래머스 문제](https://programmers.co.kr/learn/courses/30/lessons/42748) | [소스코드](https://github.com/TaeHyungK/algorithm/blob/master/src/programmers/level1/PGLevel1Q4.java)

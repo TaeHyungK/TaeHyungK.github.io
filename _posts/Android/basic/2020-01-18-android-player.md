@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "[Android] Player - 스트리밍 종류, 동작방식 및 상태"
-categories: [Android]
+categories: [Android, CS]
 tags: [CS]
 ---
-
-* content
-{:toc}
 
 ### 동영상 스트리밍 종류
 
