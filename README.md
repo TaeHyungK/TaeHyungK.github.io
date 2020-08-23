@@ -44,4 +44,8 @@ brew install rbenv ruby-build
   ```command
   gem install bundler
   ```
+  * bundle 설치
+  ```command
+  bundle install  
+  ```
   
