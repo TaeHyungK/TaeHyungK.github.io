@@ -43,7 +43,7 @@ RxJava에서는 옵저버블을 생성하는 다양한 방법을 제공하고 �
 
 주의해야 할 점은 `onComplete()`나 `onError()` 함수가 호출된 이후에는 옵저버의 어떠한 함수도 호출하지 않아야 합니다.
 
-![width:500px center](http://reactivex.io/documentation/operators/images/create.c.png)
+![create.c](/img/create.c.png)
 
 ```kotlin
 fun getBoardList(): Observable<QuerySnapshot> {
@@ -72,7 +72,7 @@ fun getBoardList(): Observable<QuerySnapshot> {
 `just()` 함수는 인자로 넣은 데이터를 바로 방출할 때 사용되는 함수입니다.<br>
 내부적으로 ScalarDisposable을 사용하고있어 `onNext()`를 통해 데이터를 방출하고 `onComplete()`까지 호출하게 됩니다.
 
-![width:500px](http://reactivex.io/documentation/operators/images/just.c.png)
+![just.c](/img/just.c.png)
 
 `just()` 는 간단한 함수이지만 **주의 해야 할 사항**이 있습니다.<br>
 ##### 구독자가 구독할 때 옵저버블의 just가 호출이 끝난 시점까지 현재 쓰레드가 더 이상 진행되지 않고 펜딩된다는 점입니다.
@@ -140,7 +140,7 @@ Main Thread 에서 돌고있는 것을 확인 할 수 있습니다.<br>
 
 이로 인하여 `just()` 와는 다르게 스트림 생성을 지연하는 효과를 볼 수 있습니다. 앞서 설명드린 just의 예제를 defer 를 적용하여 어떤 결과가 나오는지 봐보도록 하겠습니다.
 
-![width:500px](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdys216%2FbtqygsEptw2%2FVLIdD8GK2vBwfNc9Rk2fz0%2Fimg.png)
+![defer.c](/img/defer.c.png)
 
 ```kotlin
 fun deferTemp() {
