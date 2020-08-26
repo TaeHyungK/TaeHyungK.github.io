@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[RxJava2] Observable Operator - Transforming, Filtering, Combining"
+title:  "[RxJava2] Observable 가공은 어떻게 하는걸까?"
 categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
@@ -23,7 +23,7 @@ tags: [Kotlin]
 ##### 먼저 보면 좋은 글
 * [[RxJava2] RxJAva2 - Rx란 ?](https://taehyungk.github.io/2020/07/29/android-RxJava2-and-Observable/)
 * [[RxJava2] 기본 연산자](https://taehyungk.github.io/2020/08/04/android-RxJava2-Operator/)
-* [[RxJava2] Creating Observables - create, just, defer, fromCallable](https://taehyungk.github.io/2020/08/06/android-RxJava2-Creating-Observable-Operator/)
+* [[RxJava2] Observable 생성은 어떻게 하는걸까?](https://taehyungk.github.io/2020/08/06/android-RxJava2-Creating-Observable-Operator/)
 
 <br><br>
 

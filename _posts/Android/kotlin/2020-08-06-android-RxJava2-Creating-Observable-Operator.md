@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[RxJava2] Creating Observables - create, just, defer, fromCallable"
+title:  "[RxJava2] Observable 생성은 어떻게 하는걸까?"
 categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
