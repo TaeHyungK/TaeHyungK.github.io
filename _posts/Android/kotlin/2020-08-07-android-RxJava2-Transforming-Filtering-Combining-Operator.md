@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[RxJava2] Observable Operator - Transforming, Filtering, Combining"
+title:  "[RxJava2] Observable 가공은 어떻게 하는걸까?"
 categories: [Android, RxJava2]
 tags: [Kotlin]
 ---
@@ -23,7 +23,7 @@ tags: [Kotlin]
 ##### 먼저 보면 좋은 글
 * [[RxJava2] RxJAva2 - Rx란 ?](https://taehyungk.github.io/2020/07/29/android-RxJava2-and-Observable/)
 * [[RxJava2] 기본 연산자](https://taehyungk.github.io/2020/08/04/android-RxJava2-Operator/)
-* [[RxJava2] Creating Observables - create, just, defer, fromCallable](https://taehyungk.github.io/2020/08/06/android-RxJava2-Creating-Observable-Operator/)
+* [[RxJava2] Observable 생성은 어떻게 하는걸까?](https://taehyungk.github.io/2020/08/06/android-RxJava2-Creating-Observable-Operator/)
 
 <br><br>
 
@@ -43,7 +43,7 @@ tags: [Kotlin]
 
 `map` 함수는 옵저버블에서 받은 데이터를 옵저버로 가기 전에 변형해주며 값 자체를 반환하는 함수 입니다.
 
-![width:500px](https://t1.daumcdn.net/cfile/tistory/99D9D73E5B9471BF03)
+![map.c](/img/map.c.png)
 
 ```kotlin
 // 특정 user 조회 후 map 함수를 통해 데이터 리 예제
@@ -73,7 +73,7 @@ fun getUser(userId: String): Single<List<User>> {
 > 위와 같은 상황에서 RxJava의 `flatMap`을 사용하면 한번에 해결이 가능합니다.
 
 
-![width:500px](http://reactivex.io/documentation/operators/images/flatMap.c.png)
+![flatMap.c](/img/flatMap.c.png)
 
 
 ```kotlin
@@ -117,7 +117,7 @@ Filtering Operator는 업스트림의 데이터들 중 특정 값들을 수신�
 
 `debounce()`는 기본적으로 지연 방출을 하는 함수입니다. item의 방출 시간을 지정하고 방출 시간이 끝나기 전에 새로운 item이 방출되었을 경우 이전 item의 방출을 중지합니다.
 
-![width:500px](http://reactivex.io/documentation/operators/images/debounce.png)
+![debounce](/img/debounce.png)
 
 ```kotlin
 fun debounceTemp() {
@@ -165,7 +165,7 @@ fun debounceTemp() {
 
 `distinct()`는 이전에 방출된 item과 같은 값을 가진 item이 방출될 경우 생략하도록 하는 함수입니다.
 
-![width:500px](http://reactivex.io/documentation/operators/images/distinct.png)
+![distinct](/img/distinct.png)
 
 ```kotlin
 fun distinctTemp() {
@@ -208,7 +208,7 @@ Combining Operator는 다수의 옵저버블을 하나로 합치는 방법을 �
 `concat()` 은 2개 이상의 옵저버블을 이어 붙여주는 함수입니다. 첫번째 옵저버블에 `onComplete()` 이벤트가 발생해야 두 번째 옵저버블을 구독합니다.
 스레드를 활용해 일반적인 코드로 이와 같은 내용을 구현하려면 굉장히 복잡해질 것 같은데 RxJava에서는 이를 제공해주고 있습니다.
 
-![width:500px](http://reactivex.io/documentation/operators/images/concat.png)
+![concat](/img/concat.png)
 
 ```kotlin
 fun concatTemp() {
@@ -267,7 +267,7 @@ fun concatTemp() {
 `merge()` 함수는 `zip()` 함수나 `combineLatest()` 함수와 비교하면 가장 단순한 Combining 함수입니다.
 입력 옵저버블의 순서와 모드 옵저버블이 데이터를 발행하는지에 대해 관여하지 않고 어느 것이든 업스트림에 먼저 입력되는 데이터를 그대로 발행합니다.
 
-![width:500px](http://reactivex.io/documentation/operators/images/merge.png)
+![merge](/img/merge.png)
 
 ```kotlin
 fun mergeTemp() {
@@ -328,7 +328,7 @@ fun mergeTemp() {
 
 `zip()` 함수는 여러개의 옵저버블을 합쳐서 전송하게 하는 operator 입니다. 특정 item 끼리 합쳐서 두개의 발행을 합쳐서 내려주게 됩니다.
 
-![width:500px](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile4.uf.tistory.com%2Fimage%2F990BAD505C75F230158455)
+![zip](/img/zip.png)
 
 ```kotlin
 fun zipTemp() {

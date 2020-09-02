@@ -19,7 +19,7 @@ layout: compress
     {% if post.sitemap.changefreq %}
       <changefreq>{{ post.sitemap.changefreq }}</changefreq>
     {% else %}
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
     {% endif %}
 
     {% if post.sitemap.priority %}
@@ -76,7 +76,7 @@ layout: compress
     {% if page.sitemap.changefreq %}
       <changefreq>{{ page.sitemap.changefreq }}</changefreq>
     {% else %}
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
     {% endif %}
 
     {% if page.sitemap.priority %}
