@@ -55,13 +55,13 @@ public class RemoveDuplicatesFromSortedArray {
 
 ##### 반성 2. 이번엔 문제의 설명을 잘 봐야 한다 ..!
 
-> // nums is passed in by reference. (i.e., without making a copy)
+> // nums is passed in by reference. (i.e., without making a copy)<br>
 > int len = removeDuplicates(nums);
 >
-> // any modification to nums in your function would be known by the caller.
-> // using the length returned by your function, it prints the first len elements.
-> for (int i = 0; i < len; i++) {
->     print(nums[i]);
+> // any modification to nums in your function would be known by the caller. <br>
+> // using the length returned by your function, it prints the first len elements.<br>
+> for (int i = 0; i < len; i++) {<br>
+>     print(nums[i]);<br>
 > }
 
 문제 설명의 이부분이 핵심이다. 
