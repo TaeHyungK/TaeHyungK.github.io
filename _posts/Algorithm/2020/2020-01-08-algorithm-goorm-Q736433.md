@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[알고리즘] 구름 > 수의 비밀"
-categories: [Algorithm]
+categories: [Algorithm, goorm]
 tags: [구름EDU]
 ---
 

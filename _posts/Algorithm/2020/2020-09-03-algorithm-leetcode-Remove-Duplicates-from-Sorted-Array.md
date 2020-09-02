@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "[알고리즘] leetcode > Remove Duplicates from Sorted Array 풀이"
-categories: [Algorithm]
-tags: [leetcode]
+categories: [Algorithm, leetcode]
+tags: [leetcode, easy]
 
 ---
 

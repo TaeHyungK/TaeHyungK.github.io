@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[알고리즘] 프로그래머스 > 체육복"
-categories: [Algorithm]
+categories: [Algorithm, 프로그래머스]
 tags: [프로그래머스, Level1]
 ---
 

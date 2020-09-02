@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[알고리즘] 프로그래머스 > 문자열 내 p와 y의 개수"
-categories: [Algorithm]
+categories: [Algorithm, 프로그래머스]
 tags: [프로그래머스, Level1]
 author: TaeHyungK
 ---
