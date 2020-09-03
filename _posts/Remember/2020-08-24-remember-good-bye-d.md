@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "[회고] 주니어 개발자의 퇴사"
-categories: [회고, 2020]
-tags: [2020]
+categories: [회고, Company]
+tags: [2020 회고]
 ---
 
 ## 주니어 개발자의 퇴사 회고
