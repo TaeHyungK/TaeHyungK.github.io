@@ -2,7 +2,7 @@
 layout: post
 title:  "[회고] 2019년을 돌아보며"
 categories: [회고, 2019]
-tags: [2019회고]
+tags: [2019]
 ---
 
 ## 베짱이 개발자
