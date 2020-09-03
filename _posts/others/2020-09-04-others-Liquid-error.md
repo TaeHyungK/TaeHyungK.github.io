@@ -1,5 +1,6 @@
+---
 layout: post
-title:  "[기타] jekyll Liquid error (line 6): comparson of Array with Array failed in ~"
+title:  "[기타] jekyll Liquid error (line 6): comparison of Array with Array failed in ~"
 categories: [Others]
 tags: [tips]
 
@@ -33,7 +34,7 @@ Liquid Exception: Liquid error (line 6): comparison of Array with Array failed i
 
 수정한 md 파일의 `categories`에는 **숫자만 존재할 수 없다.** 아마 `tags` 영역도 똑같을 것 같다.
 
-####문제 발생 md 파일
+#### 문제 발생 md 파일
 
 ```markdown
 ---
