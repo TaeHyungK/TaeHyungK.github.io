@@ -7,7 +7,7 @@ tags: [Kotlin]
 
 ### Hilt
 
-Hilt는 Dagger 기반의 DI 라이브러리로 Annotation을 이용한 컴파일 타임 generated code로 의전송 주입을 구현하였습니다.
+Hilt는 Dagger 기반의 DI 라이브러리로 Annotation을 이용한 컴파일 타임 generated code로 의존성 주입을 구현하였습니다.
 
 기존 Dagger는 오류를 컴파일 타임에 검증이 가능하고 퍼포먼스가 준수하다는 장점이 있지만 과도하게 많은 Annotation과 보일러 플레이트 코드 때문에 러닝커브가 높다는 단점이 있습니다.
 
@@ -19,7 +19,7 @@ Hilt는 기존 Dagger의 장점은 그대로 활용하면서 보일러 플레이
 
 <br><br>
 ##### 먼저 보면 좋은 글
-* [[DI] 의존성 주입? Dagger?](https://taehyungk.github.io/2020/08/12/android-DI-Dagger/)
+* [[DI] 의존성 주입? Dagger?](https://taehyungk.github.io/posts/android-DI-Dagger/)
 
 <br><br>
 
