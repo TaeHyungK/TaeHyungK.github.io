@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[회고] 하이퍼커넥트 인턴부터 전환까지"
+title:  "[회고] 하이퍼커넥트 인턴 후기"
 categories: [회고, Company]
 tags: [2020 회고]
 ---
