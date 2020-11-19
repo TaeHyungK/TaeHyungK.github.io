@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[Conference] if 카카오 2020 후기"
-categories: [Android]
+categories: [Android, Conference]
 tags: [Conference]
 ---
 
