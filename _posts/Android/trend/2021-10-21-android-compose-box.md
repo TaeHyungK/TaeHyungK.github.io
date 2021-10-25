@@ -162,7 +162,7 @@ Box(
 
 #### propagateMinConstraints
 
-`propagateMinConsraints` 옵션을 true로 주게되면, 박스 안에 있는 제일 작은 크기의 뷰를 컨테이너 박스의 크기만큼 컨스트레인트를 걸게 됩니다.
+`propagateMinConsraints` 옵션을 true로 주게되면, 박스 안에 있는 제일 작은 크기의 뷰를 컨테이너 박스의 크기만큼 컨스트레인트를 걸게 된다.
 
 ```kotlin
 @Composable
