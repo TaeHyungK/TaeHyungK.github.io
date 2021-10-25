@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Compose] Box"
+title:  "[Compose] Box와 BoxWithConstraints"
 categories: [Android, Compose]
 tags: [Jetpack]
 ---
@@ -198,6 +198,159 @@ fun BoxContainer() {
 > 
 > 참고로 해당 옵션은 `false` 가 default 이다.  
 
+<br><br>
+
+### BoxWithConstraints
+기본적으로 Box와 동일하지만 `BoxWithConstraintsScope` 를 제공해서 Box의 특정 조건에 따른 처리가 가능한 Composable 이다.
+
+```kotlin
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.study.compose.ui.theme.ComposeTheme
+import kotlin.random.Random
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ComposeTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(color = MaterialTheme.colors.background) {
+                    BoxWithConstraintContainer()
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun BoxWithConstraintContainer() {
+    BoxWithConstraints(
+        modifier = Modifier
+            .background(Color.White)
+            .fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Column {
+            BoxWithConstraintContainerItem(
+                Modifier
+                    .size(200.dp)
+                    .background(Color.Yellow))
+            BoxWithConstraintContainerItem(
+                Modifier
+                    .size(300.dp)
+                    .background(Color.Green))
+        }
+    }
+}
+
+@Composable
+fun BoxWithConstraintContainerItem(modifier: Modifier = Modifier) {
+    BoxWithConstraints(
+        modifier = modifier,
+        contentAlignment = Alignment.CenterEnd
+    ) {
+        if (minHeight > 200.dp) {
+            Text(text = "이것은 큰 상자이다.")
+        } else {
+            Text(text = "이것은 큰 상자이다.")
+        }
+    }
+}
+```
+
+위와 같이 사용할 수 있고 위 코드를 직접 IDE에 작성해보면 `BoxWithConstraintContainerItem` 의 BoxWithConstraints 내부에서 
+`BoxWithConstraintsScope` 를 지원하는 것을 볼 수 있다.
+
+> 참고로, `BoxWithConstraints` 내부에서 사용되는 `minHeight` 는 `BoxWithConstraintsScope` 가 가지고 있는 프로퍼티로
+> `this.minHeight` 를 의미한다.
+
+![스크린샷 2021-10-25 오후 10.15.34.png](/img/스크린샷 2021-10-25 오후 10.15.34.png)
+
+<br>
+
+이제 `BoxWithConstraints` 가 얼추 뭐하는 애인지는 알았다. 그래서 얘로 뭘 할 수 있는가?
+
+-> 화면 전환에 따라 레이아웃을 변경하는 등 여러 설정에 따른 변화에 대응하도록 할 수 있다.
+
+```kotlin
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.study.compose.ui.theme.ComposeTheme
+import kotlin.random.Random
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ComposeTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(color = MaterialTheme.colors.background) {
+                    BoxWithConstraintContainer()
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun BoxWithConstraintContainer() {
+    BoxWithConstraints(
+        modifier = Modifier
+            .background(Color.White)
+            .fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        if (minHeight > 400.dp) {
+            DummyBox(
+                modifier = Modifier.size(200.dp),
+                color = Color.Green
+            )
+        } else {
+            DummyBox(
+                modifier = Modifier.size(200.dp),
+                color = Color.Yellow
+            )
+        }
+        Text(text = "minHeight: $minHeight")
+    }
+}
+```
+
+위 코드에서 minHeight가 400.dp 보다 크면 GreenBox, 작으면 YellowBox를 하도록 하였다.
+
+처음 빌드하면 기기마다 다르겠지만.. 최신 기기의 경우 대부분 크기가 크기 때문에 GreenBox가 보일 것이다.
+
+이제 가로로 핸드폰을 회전시켜 보자. (가로 모드 설정이 Off 되어있으면 켜주자 👊)<br>
+GreenBox는 사라지고 YellowBox가 생기는 것을 볼 수 있다.
+
+> 혹시나 그대로 GreenBox라면 혹시 자신의 기기가 폴드는 아닐지 의심해보자..! (폴드가 아니더라도 가로폭이 굉장히 넓은 기기라면 동일하다)<br>
+> 의심만 하지말고 코드도 한번 보자..! 코드에서 보았듯이 height가 400dp가 넘으면 YellowBox는 나오지 않는다.<br>
+> YellowBox를 보지 못하신 분은 가로 모드로 전환했을 때 나오는 minHeight 보다 더 작은 값을 if문에 넣어주면 YellowBox를 볼 수 있다.   
 
 ##### 글을 마치며
 
@@ -209,3 +362,4 @@ Row, Column, Box 를 사용하면 웬만한 UI들은 작성할 수 있을 것으
 * [Jetpack Compose 가이드](https://developer.android.com/jetpack/compose/documentation)
 * [Jetpack Compose Foundation 라이브러리](https://developer.android.com/jetpack/androidx/releases/compose-foundation?hl=ko)
 * [취준생을 위한 안드로이드 앱만들기 콤포즈UI Box - Android Kotlin jetpack Tutorial (2021) - JetPack Compose](https://www.youtube.com/watch?v=4W9rDwaiEPQ&list=PLgOlaPUIbynpFHXeEORmvIOoiNVgSsWeq&index=5)
+* [취준생을 위한 안드로이드 앱만들기 콤포즈UI BoxWithConstraints - Android Kotlin jetpack Tutorial (2021) - Compose](https://www.youtube.com/watch?v=g2pd3a87-E4&list=PLgOlaPUIbynpFHXeEORmvIOoiNVgSsWeq&index=6)
